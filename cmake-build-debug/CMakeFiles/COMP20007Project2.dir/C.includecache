@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/COMP20007Project2/main.c
+stdio.h
+-
+stdlib.h
+-
+
+/mnt/c/COMP20007Project2/max_heap.c
+max_heap.h
+/mnt/c/COMP20007Project2/max_heap.h
+
+/mnt/c/COMP20007Project2/max_heap.h
+stdlib.h
+-
+stdio.h
+-
+
