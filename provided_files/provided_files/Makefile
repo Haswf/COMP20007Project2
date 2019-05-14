@@ -5,12 +5,12 @@
 # Template by Tobias Edwards <tobias.edwards@unimelb.edu.au>
 
 CC     = gcc
-CFLAGS = -Wall
-ALL    = p1 p2 p3
+CFLAGS = -Wall -std=c99
+ALL    = p1 p2 p3 max_heap
 
 all: $(ALL)
 
-P1_FILES = p1.c
+P1_FILES = p1.c max_heap.c
 p1: $(P1_FILES)
 	$(CC) $(CFLAGS) -o p1 $(P1_FILES)
 

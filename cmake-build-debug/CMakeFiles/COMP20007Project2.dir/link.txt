@@ -1,1 +1,1 @@
-/usr/bin/cc -g   CMakeFiles/COMP20007Project2.dir/max_heap.c.o CMakeFiles/COMP20007Project2.dir/main.c.o  -o COMP20007Project2 
+/usr/bin/cc -g   CMakeFiles/COMP20007Project2.dir/max_heap.c.o CMakeFiles/COMP20007Project2.dir/mytest.c.o  -o COMP20007Project2 -lm 

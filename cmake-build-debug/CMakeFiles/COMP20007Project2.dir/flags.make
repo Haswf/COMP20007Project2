@@ -6,5 +6,5 @@ C_FLAGS = -g   -std=gnu11
 
 C_DEFINES = 
 
-C_INCLUDES = -I/mnt/c/COMP20007Project2/provided_files 
+C_INCLUDES = -I/mnt/c/COMP20007Project2/. 
 

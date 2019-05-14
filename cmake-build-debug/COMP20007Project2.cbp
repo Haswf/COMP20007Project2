@@ -34,7 +34,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/mnt/c/COMP20007Project2/provided_files"/>
+					<Add directory="/mnt/c/COMP20007Project2/."/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
@@ -55,7 +55,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/mnt/c/COMP20007Project2/provided_files"/>
+					<Add directory="/mnt/c/COMP20007Project2/."/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
@@ -80,13 +80,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/mnt/c/COMP20007Project2/main.c">
-			<Option target="COMP20007Project2"/>
-		</Unit>
 		<Unit filename="/mnt/c/COMP20007Project2/max_heap.c">
 			<Option target="COMP20007Project2"/>
 		</Unit>
 		<Unit filename="/mnt/c/COMP20007Project2/max_heap.h">
+			<Option target="COMP20007Project2"/>
+		</Unit>
+		<Unit filename="/mnt/c/COMP20007Project2/mytest.c">
 			<Option target="COMP20007Project2"/>
 		</Unit>
 		<Unit filename="/mnt/c/COMP20007Project2/CMakeLists.txt">

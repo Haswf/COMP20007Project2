@@ -12,15 +12,239 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f770ae5-b852-4021-853b-3b9c7c84409d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/COMP20007Project2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max_heap.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/max_heap.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mytest.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP20007Project2.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP20007Project2.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP20007Project2.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP20007Project2.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP20007Project2.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP20007Project2.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP20007Project2.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP20007Project2.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP20007Project2.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP20007Project2.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP20007Project2.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP20007Project2.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP20007Project2.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP20007Project2.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP20007Project2.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP20007Project2.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP20007Project2.dir/main.c.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP20007Project2.dir/max_heap.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP20007Project2.dir/max_heap.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/COMP20007Project2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/COMP20007Project2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/COMP20007Project2.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/COMP20007Project2.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/max_heap.c" beforeDir="false" afterPath="$PROJECT_DIR$/max_heap.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/max_heap.h" beforeDir="false" afterPath="$PROJECT_DIR$/max_heap.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/._provided_files" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/._Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/._p1.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/._p2.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/._p3.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/._test_all.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/._tests" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/._verifier.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p1a-in-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p1a-in-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p1a-in-2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p1a-in-3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p1a-in-4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p1a-in-5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p1a-in-6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p1a-in-7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p1a-in-8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p1a-in-9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p1a-out-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p1a-out-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p1a-out-2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p1a-out-3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p1a-out-4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p1a-out-5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p1a-out-6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p1a-out-7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p1a-out-8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p1a-out-9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p1b-in-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p1b-in-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p1b-in-2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p1b-in-3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p1b-in-4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p1b-in-5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p1b-in-6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p1b-in-7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p1b-in-8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p1b-in-9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p1b-out-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p1b-out-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p1b-out-2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p1b-out-3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p1b-out-4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p1b-out-5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p1b-out-6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p1b-out-7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p1b-out-8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p1b-out-9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p2a-in-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p2a-in-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p2a-in-2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p2a-in-3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p2a-in-4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p2a-in-5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p2a-in-6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p2a-in-7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p2a-in-8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p2a-in-9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p2a-out-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p2a-out-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p2a-out-2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p2a-out-3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p2a-out-4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p2a-out-5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p2a-out-6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p2a-out-7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p2a-out-8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p2a-out-9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p2b-in-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p2b-in-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p2b-in-2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p2b-in-3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p2b-in-4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p2b-in-5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p2b-in-6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p2b-in-7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p2b-in-8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p2b-in-9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p2b-out-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p2b-out-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p2b-out-2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p2b-out-3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p2b-out-4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p2b-out-5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p2b-out-6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p2b-out-7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p2b-out-8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p2b-out-9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p3-in-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p3-in-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p3-in-2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p3-in-3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p3-in-4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p3-in-5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p3-in-6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p3-in-7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p3-in-8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p3-in-9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p3-out-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p3-out-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p3-out-2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p3-out-3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p3-out-4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p3-out-5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p3-out-6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p3-out-7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p3-out-8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/__MACOSX/provided_files/tests/._p3-out-9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/provided_files/provided_files/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/p1.c" beforeDir="false" afterPath="$PROJECT_DIR$/provided_files/provided_files/p1.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/p2.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/p3.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/test_all.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p1a-in-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p1a-in-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p1a-in-2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p1a-in-3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p1a-in-4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p1a-in-5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p1a-in-6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p1a-in-7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p1a-in-8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p1a-in-9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p1a-out-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p1a-out-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p1a-out-2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p1a-out-3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p1a-out-4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p1a-out-5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p1a-out-6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p1a-out-7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p1a-out-8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p1a-out-9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p1b-in-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p1b-in-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p1b-in-2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p1b-in-3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p1b-in-4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p1b-in-5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p1b-in-6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p1b-in-7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p1b-in-8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p1b-in-9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p1b-out-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p1b-out-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p1b-out-2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p1b-out-3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p1b-out-4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p1b-out-5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p1b-out-6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p1b-out-7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p1b-out-8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p1b-out-9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p2a-in-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p2a-in-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p2a-in-2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p2a-in-3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p2a-in-4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p2a-in-5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p2a-in-6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p2a-in-7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p2a-in-8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p2a-in-9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p2a-out-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p2a-out-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p2a-out-2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p2a-out-3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p2a-out-4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p2a-out-5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p2a-out-6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p2a-out-7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p2a-out-8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p2a-out-9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p2b-in-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p2b-in-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p2b-in-2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p2b-in-3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p2b-in-4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p2b-in-5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p2b-in-6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p2b-in-7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p2b-in-8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p2b-in-9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p2b-out-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p2b-out-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p2b-out-2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p2b-out-3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p2b-out-4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p2b-out-5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p2b-out-6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p2b-out-7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p2b-out-8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p2b-out-9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p3-in-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p3-in-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p3-in-2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p3-in-3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p3-in-4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p3-in-5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p3-in-6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p3-in-7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p3-in-8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p3-in-9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p3-out-0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p3-out-1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p3-out-2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p3-out-3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p3-out-4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p3-out-5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p3-out-6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p3-out-7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p3-out-8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/tests/p3-out-9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/provided_files/provided_files/verifier.py" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,8 +262,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/max_heap.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="761">
-              <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+            <state relative-caret-position="524">
+              <caret line="66" column="16" lean-forward="true" selection-start-line="66" selection-start-column="16" selection-end-line="66" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mytest.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+              <folding>
+                <element signature="e#40#57#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -47,20 +283,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
-              <folding>
-                <element signature="e#39#57#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="260">
+              <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -68,11 +292,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/max_heap.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
-              <folding>
-                <element signature="e#154#173#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="286">
+              <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -85,18 +306,20 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/main.c" />
+        <option value="$PROJECT_DIR$/Makefile" />
+        <option value="$PROJECT_DIR$/p1.c" />
         <option value="$PROJECT_DIR$/max_heap.h" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/mytest.c" />
         <option value="$PROJECT_DIR$/max_heap.c" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="2576" />
-    <option name="height" value="1456" />
+    <option name="x" value="1273" />
+    <option name="width" value="1294" />
+    <option name="height" value="1407" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -117,19 +340,6 @@
             <path>
               <item name="COMP20007Project2" type="b2602c69:ProjectViewProjectNode" />
               <item name="COMP20007Project2" type="462c0819:PsiDirectoryNode" />
-              <item name="provided_files" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="COMP20007Project2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="COMP20007Project2" type="462c0819:PsiDirectoryNode" />
-              <item name="provided_files" type="462c0819:PsiDirectoryNode" />
-              <item name="__MACOSX" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="COMP20007Project2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="COMP20007Project2" type="462c0819:PsiDirectoryNode" />
-              <item name="provided_files" type="462c0819:PsiDirectoryNode" />
-              <item name="__MACOSX" type="462c0819:PsiDirectoryNode" />
               <item name="provided_files" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -183,33 +393,36 @@
       <updated>1557756169535</updated>
       <workItem from="1557756170745" duration="215000" />
       <workItem from="1557756387255" duration="191000" />
-      <workItem from="1557756593314" duration="2898000" />
+      <workItem from="1557756593314" duration="3029000" />
+      <workItem from="1557836803760" duration="3517000" />
+      <workItem from="1557840323946" duration="2613000" />
+      <workItem from="1557842940079" duration="3114000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3304000" />
+    <option name="totallyTimeSpent" value="12679000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1456" extended-state="0" />
+    <frame x="1273" y="0" width="1294" height="1407" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25397456" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.3873582" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32955405" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.39089483" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39952904" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.32955405" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.3288854" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32969603" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="CMake" order="12" weight="0.32955405" />
+      <window_info anchor="bottom" id="CMake" order="12" weight="0.3289166" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -221,50 +434,60 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/provided_files/__MACOSX/provided_files/._p1.c">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/provided_files/__MACOSX/provided_files/._p2.c">
+    <entry file="file://$PROJECT_DIR$/provided_files/__MACOSX/provided_files/._p1.c" />
+    <entry file="file://$PROJECT_DIR$/provided_files/__MACOSX/provided_files/._p2.c" />
+    <entry file="file://$PROJECT_DIR$/provided_files/__MACOSX/provided_files/._verifier.py" />
+    <entry file="file://$PROJECT_DIR$/main.c" />
+    <entry file="file://$PROJECT_DIR$/verifier.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="-1248" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/provided_files/__MACOSX/provided_files/._verifier.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+    <entry file="file://$PROJECT_DIR$/p1.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="494">
+          <caret line="49" column="26" lean-forward="true" selection-start-line="49" selection-start-column="26" selection-end-line="49" selection-end-column="26" />
           <folding>
-            <element signature="e#39#57#0" expanded="true" />
+            <element signature="e#127#145#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/max_heap.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="286">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mytest.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
           <folding>
-            <element signature="e#154#173#0" expanded="true" />
+            <element signature="e#40#57#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/max_heap.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="761">
-          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+        <state relative-caret-position="524">
+          <caret line="66" column="16" lean-forward="true" selection-start-line="66" selection-start-column="16" selection-end-line="66" selection-end-column="16" />
         </state>
       </provider>
     </entry>

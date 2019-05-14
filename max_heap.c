@@ -4,7 +4,7 @@
 
 #include "max_heap.h"
 
-int swap(int* a, int* b){
+void swap(int* a, int* b){
     int tmp = *a;
     *a = *b;
     *b = tmp;
@@ -14,39 +14,79 @@ int swap(int* a, int* b){
 int parent(int i){
     return (i/2);
 }
-int left(int i){
+int left_child(int i){
     return 2*i;
 }
 
-int right(int i){
+int right_child(int i){
     return 2*i+1;
 }
 
-heap* readInputToHeap(){
-    heap* h = (heap*)malloc(sizeof(heap));
-    h->array = (int*)malloc(sizeof(int)*(h->size+1));
-    scanf("%d", &h->size);
-    int i = 1;
-    for (i;i<=h->size;i++){
-        scanf("%d", &h->array[i]);
+int readInputToArray(int** output){
+    int size;
+    scanf("%d", &size);
+    *output = (int*)malloc(sizeof(int)*size+1);
+    int i;
+    for (i=1;i<=size;i++){
+        scanf("%d", &(*output)[i]);
     }
-    return h;
+    return size;
 }
 
-int maxChild(heap *h, int p){
-    if (h->array[left(p)] > h->array[right(p)]){
-        return left(p);
+int* build_heap(int* array, int size){
+    int last = size;
+    int i;
+    for (i=parent(last-1);i>0;i--){
+        heapify(array, size, i);
     }
-    else {
-        return right(p);
+    return array;
+}
+
+void heapify(int* heap, int size, int i){
+    if (i>size){
+        return;
+    }
+    int left = left_child(i);
+    int right = right_child(i);
+    int max = i;
+    if (left <= size && heap[left]>heap[max]){
+        max = left;
+    }
+    if (right <= size && heap[right]>heap[max]){
+        max = right;
+    }
+    if (max!=i){
+        swap(&heap[max], &heap[i]);
+        heapify(heap, size, max);
     }
 }
 
-int siftdown(heap* h, int n, int p){
-    while (2*p <= (n-1) && (h->array[p] < h->array[left(p)] || h[p].array < h->array[right(p)])){
-        int t = maxChild(h, p);
-        swap(&h->array[p], &h->array[t]);
-        p = t;
+void buildHeap(int* array, int size){
+    int height = log2(size+1);
+    int m = pow(2, height-1);
+    while (m>0){
+        int p;
+        for (p=m;p<=2*m-1;p++){
+            siftdown(array, size, p);
+        }
+        m = parent(m);
+    }
+}
+
+
+void siftdown(int* heap, int size, int p){
+    while (left_child(p)<=size && (heap[p] < heap[left_child(p)] || heap[p] < heap[right_child(p)])){
+        int left = left_child(p);
+        int right = right_child(p);
+        int max = p;
+        if (heap[left]>heap[max]){
+            max = left;
+        }
+        if (heap[right]>heap[max]){
+            max = right;
+        }
+        swap(&heap[max], &heap[p]);
+        p = max;
     }
 }
 

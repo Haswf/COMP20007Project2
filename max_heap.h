@@ -9,14 +9,14 @@
 
 #include <stdlib.h>
 #include <stdio.h>
-
-typedef struct {
-    int* array;
-    int size;
-} heap;
+#include <math.h>
 
 
-heap* readInput();
-
-
+int readInputToArray(int** output);
+void heapify(int* heap, int size, int i);
+void right_heapify(int* heap, int size, int i);
+int* build_heap(int* array, int size);
+int* build_right_heap(int* array, int size);
+void siftdown(int* heap, int size, int p);
+void buildHeap(int* array, int size);
 

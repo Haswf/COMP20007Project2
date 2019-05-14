@@ -6,10 +6,12 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/COMP20007Project2/main.c
+.././max_heap.h
+stdlib.h
+-
 stdio.h
 -
-stdlib.h
+math.h
 -
 
 /mnt/c/COMP20007Project2/max_heap.c
@@ -20,5 +22,17 @@ max_heap.h
 stdlib.h
 -
 stdio.h
+-
+math.h
+-
+
+/mnt/c/COMP20007Project2/mytest.c
+math.h
+-
+stdio.h
+-
+stdlib.h
+-
+max_heap.h
 -
 

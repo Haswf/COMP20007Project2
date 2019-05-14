@@ -123,33 +123,6 @@ COMP20007Project2/fast:
 	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/build
 .PHONY : COMP20007Project2/fast
 
-main.o: main.c.o
-
-.PHONY : main.o
-
-# target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/main.c.o
-.PHONY : main.c.o
-
-main.i: main.c.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/main.c.i
-.PHONY : main.c.i
-
-main.s: main.c.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/main.c.s
-.PHONY : main.c.s
-
 max_heap.o: max_heap.c.o
 
 .PHONY : max_heap.o
@@ -177,6 +150,33 @@ max_heap.c.s:
 	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/max_heap.c.s
 .PHONY : max_heap.c.s
 
+mytest.o: mytest.c.o
+
+.PHONY : mytest.o
+
+# target to build an object file
+mytest.c.o:
+	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/mytest.c.o
+.PHONY : mytest.c.o
+
+mytest.i: mytest.c.i
+
+.PHONY : mytest.i
+
+# target to preprocess a source file
+mytest.c.i:
+	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/mytest.c.i
+.PHONY : mytest.c.i
+
+mytest.s: mytest.c.s
+
+.PHONY : mytest.s
+
+# target to generate assembly for a file
+mytest.c.s:
+	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/mytest.c.s
+.PHONY : mytest.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,12 +186,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... COMP20007Project2"
 	@echo "... edit_cache"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 	@echo "... max_heap.o"
 	@echo "... max_heap.i"
 	@echo "... max_heap.s"
+	@echo "... mytest.o"
+	@echo "... mytest.i"
+	@echo "... mytest.s"
 .PHONY : help
 
 
