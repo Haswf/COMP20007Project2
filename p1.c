@@ -58,5 +58,10 @@ void problem_1_a() {
 
 /* TODO: Implement your solution to Problem 1.b. in this function. */
 void problem_1_b() {
-
+    int* heap = NULL;
+    int size = readInputToArray(&heap);
+    buildHeap(heap, size);
+    //convertRight(heap, size);
+    free(heap);
+    heap = NULL;
 }

@@ -10,13 +10,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
-
+#include <string.h>
 
 int readInputToArray(int** output);
-void heapify(int* heap, int size, int i);
-void right_heapify(int* heap, int size, int i);
-int* build_heap(int* array, int size);
-int* build_right_heap(int* array, int size);
 void siftdown(int* heap, int size, int p);
 void buildHeap(int* array, int size);
-
+void removeMax(int* heap, int* size);

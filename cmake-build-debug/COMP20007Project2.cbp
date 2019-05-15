@@ -80,13 +80,25 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/mnt/c/COMP20007Project2/max_heap.c">
+		<Unit filename="/mnt/c/COMP20007Project2/graph.c">
 			<Option target="COMP20007Project2"/>
 		</Unit>
-		<Unit filename="/mnt/c/COMP20007Project2/max_heap.h">
+		<Unit filename="/mnt/c/COMP20007Project2/graph.h">
 			<Option target="COMP20007Project2"/>
 		</Unit>
-		<Unit filename="/mnt/c/COMP20007Project2/mytest.c">
+		<Unit filename="/mnt/c/COMP20007Project2/list.c">
+			<Option target="COMP20007Project2"/>
+		</Unit>
+		<Unit filename="/mnt/c/COMP20007Project2/list.h">
+			<Option target="COMP20007Project2"/>
+		</Unit>
+		<Unit filename="/mnt/c/COMP20007Project2/priorityqueue.c">
+			<Option target="COMP20007Project2"/>
+		</Unit>
+		<Unit filename="/mnt/c/COMP20007Project2/priorityqueue.h">
+			<Option target="COMP20007Project2"/>
+		</Unit>
+		<Unit filename="/mnt/c/COMP20007Project2/testgraph.c">
 			<Option target="COMP20007Project2"/>
 		</Unit>
 		<Unit filename="/mnt/c/COMP20007Project2/CMakeLists.txt">

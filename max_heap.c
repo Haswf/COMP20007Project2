@@ -10,7 +10,6 @@ void swap(int* a, int* b){
     *b = tmp;
 }
 
-
 int parent(int i){
     return (i/2);
 }
@@ -22,57 +21,28 @@ int right_child(int i){
     return 2*i+1;
 }
 
-int readInputToArray(int** output){
+int readInputToArray(int** output) {
     int size;
     scanf("%d", &size);
-    *output = (int*)malloc(sizeof(int)*size+1);
+    *output = (int *) malloc(sizeof(int) * size + 1);
     int i;
-    for (i=1;i<=size;i++){
+    for (i = 1; i <= size; i++) {
         scanf("%d", &(*output)[i]);
     }
     return size;
 }
 
-int* build_heap(int* array, int size){
-    int last = size;
-    int i;
-    for (i=parent(last-1);i>0;i--){
-        heapify(array, size, i);
-    }
-    return array;
-}
-
-void heapify(int* heap, int size, int i){
-    if (i>size){
-        return;
-    }
-    int left = left_child(i);
-    int right = right_child(i);
-    int max = i;
-    if (left <= size && heap[left]>heap[max]){
-        max = left;
-    }
-    if (right <= size && heap[right]>heap[max]){
-        max = right;
-    }
-    if (max!=i){
-        swap(&heap[max], &heap[i]);
-        heapify(heap, size, max);
-    }
-}
-
 void buildHeap(int* array, int size){
     int height = log2(size+1);
     int m = pow(2, height-1);
-    while (m>0){
+    while (m>0) {
         int p;
-        for (p=m;p<=2*m-1;p++){
+        for (p = m; p <= 2 * m - 1; p++) {
             siftdown(array, size, p);
         }
         m = parent(m);
     }
 }
-
 
 void siftdown(int* heap, int size, int p){
     while (left_child(p)<=size && (heap[p] < heap[left_child(p)] || heap[p] < heap[right_child(p)])){
@@ -90,3 +60,8 @@ void siftdown(int* heap, int size, int p){
     }
 }
 
+void removeMax(int* heap, int* size){
+    heap[1] = heap[*size];
+    siftdown(heap, *size, 1);
+    *size -= 1;
+}

@@ -57,67 +57,119 @@ include CMakeFiles/COMP20007Project2.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/COMP20007Project2.dir/flags.make
 
-CMakeFiles/COMP20007Project2.dir/max_heap.c.o: CMakeFiles/COMP20007Project2.dir/flags.make
-CMakeFiles/COMP20007Project2.dir/max_heap.c.o: ../max_heap.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/COMP20007Project2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/COMP20007Project2.dir/max_heap.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/COMP20007Project2.dir/max_heap.c.o   -c /mnt/c/COMP20007Project2/max_heap.c
+CMakeFiles/COMP20007Project2.dir/graph.c.o: CMakeFiles/COMP20007Project2.dir/flags.make
+CMakeFiles/COMP20007Project2.dir/graph.c.o: ../graph.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/COMP20007Project2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/COMP20007Project2.dir/graph.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/COMP20007Project2.dir/graph.c.o   -c /mnt/c/COMP20007Project2/graph.c
 
-CMakeFiles/COMP20007Project2.dir/max_heap.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/COMP20007Project2.dir/max_heap.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/COMP20007Project2/max_heap.c > CMakeFiles/COMP20007Project2.dir/max_heap.c.i
+CMakeFiles/COMP20007Project2.dir/graph.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/COMP20007Project2.dir/graph.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/COMP20007Project2/graph.c > CMakeFiles/COMP20007Project2.dir/graph.c.i
 
-CMakeFiles/COMP20007Project2.dir/max_heap.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/COMP20007Project2.dir/max_heap.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/COMP20007Project2/max_heap.c -o CMakeFiles/COMP20007Project2.dir/max_heap.c.s
+CMakeFiles/COMP20007Project2.dir/graph.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/COMP20007Project2.dir/graph.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/COMP20007Project2/graph.c -o CMakeFiles/COMP20007Project2.dir/graph.c.s
 
-CMakeFiles/COMP20007Project2.dir/max_heap.c.o.requires:
+CMakeFiles/COMP20007Project2.dir/graph.c.o.requires:
 
-.PHONY : CMakeFiles/COMP20007Project2.dir/max_heap.c.o.requires
+.PHONY : CMakeFiles/COMP20007Project2.dir/graph.c.o.requires
 
-CMakeFiles/COMP20007Project2.dir/max_heap.c.o.provides: CMakeFiles/COMP20007Project2.dir/max_heap.c.o.requires
-	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/max_heap.c.o.provides.build
-.PHONY : CMakeFiles/COMP20007Project2.dir/max_heap.c.o.provides
+CMakeFiles/COMP20007Project2.dir/graph.c.o.provides: CMakeFiles/COMP20007Project2.dir/graph.c.o.requires
+	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/graph.c.o.provides.build
+.PHONY : CMakeFiles/COMP20007Project2.dir/graph.c.o.provides
 
-CMakeFiles/COMP20007Project2.dir/max_heap.c.o.provides.build: CMakeFiles/COMP20007Project2.dir/max_heap.c.o
+CMakeFiles/COMP20007Project2.dir/graph.c.o.provides.build: CMakeFiles/COMP20007Project2.dir/graph.c.o
 
 
-CMakeFiles/COMP20007Project2.dir/mytest.c.o: CMakeFiles/COMP20007Project2.dir/flags.make
-CMakeFiles/COMP20007Project2.dir/mytest.c.o: ../mytest.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/COMP20007Project2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/COMP20007Project2.dir/mytest.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/COMP20007Project2.dir/mytest.c.o   -c /mnt/c/COMP20007Project2/mytest.c
+CMakeFiles/COMP20007Project2.dir/list.c.o: CMakeFiles/COMP20007Project2.dir/flags.make
+CMakeFiles/COMP20007Project2.dir/list.c.o: ../list.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/COMP20007Project2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/COMP20007Project2.dir/list.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/COMP20007Project2.dir/list.c.o   -c /mnt/c/COMP20007Project2/list.c
 
-CMakeFiles/COMP20007Project2.dir/mytest.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/COMP20007Project2.dir/mytest.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/COMP20007Project2/mytest.c > CMakeFiles/COMP20007Project2.dir/mytest.c.i
+CMakeFiles/COMP20007Project2.dir/list.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/COMP20007Project2.dir/list.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/COMP20007Project2/list.c > CMakeFiles/COMP20007Project2.dir/list.c.i
 
-CMakeFiles/COMP20007Project2.dir/mytest.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/COMP20007Project2.dir/mytest.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/COMP20007Project2/mytest.c -o CMakeFiles/COMP20007Project2.dir/mytest.c.s
+CMakeFiles/COMP20007Project2.dir/list.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/COMP20007Project2.dir/list.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/COMP20007Project2/list.c -o CMakeFiles/COMP20007Project2.dir/list.c.s
 
-CMakeFiles/COMP20007Project2.dir/mytest.c.o.requires:
+CMakeFiles/COMP20007Project2.dir/list.c.o.requires:
 
-.PHONY : CMakeFiles/COMP20007Project2.dir/mytest.c.o.requires
+.PHONY : CMakeFiles/COMP20007Project2.dir/list.c.o.requires
 
-CMakeFiles/COMP20007Project2.dir/mytest.c.o.provides: CMakeFiles/COMP20007Project2.dir/mytest.c.o.requires
-	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/mytest.c.o.provides.build
-.PHONY : CMakeFiles/COMP20007Project2.dir/mytest.c.o.provides
+CMakeFiles/COMP20007Project2.dir/list.c.o.provides: CMakeFiles/COMP20007Project2.dir/list.c.o.requires
+	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/list.c.o.provides.build
+.PHONY : CMakeFiles/COMP20007Project2.dir/list.c.o.provides
 
-CMakeFiles/COMP20007Project2.dir/mytest.c.o.provides.build: CMakeFiles/COMP20007Project2.dir/mytest.c.o
+CMakeFiles/COMP20007Project2.dir/list.c.o.provides.build: CMakeFiles/COMP20007Project2.dir/list.c.o
+
+
+CMakeFiles/COMP20007Project2.dir/priorityqueue.c.o: CMakeFiles/COMP20007Project2.dir/flags.make
+CMakeFiles/COMP20007Project2.dir/priorityqueue.c.o: ../priorityqueue.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/COMP20007Project2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/COMP20007Project2.dir/priorityqueue.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/COMP20007Project2.dir/priorityqueue.c.o   -c /mnt/c/COMP20007Project2/priorityqueue.c
+
+CMakeFiles/COMP20007Project2.dir/priorityqueue.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/COMP20007Project2.dir/priorityqueue.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/COMP20007Project2/priorityqueue.c > CMakeFiles/COMP20007Project2.dir/priorityqueue.c.i
+
+CMakeFiles/COMP20007Project2.dir/priorityqueue.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/COMP20007Project2.dir/priorityqueue.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/COMP20007Project2/priorityqueue.c -o CMakeFiles/COMP20007Project2.dir/priorityqueue.c.s
+
+CMakeFiles/COMP20007Project2.dir/priorityqueue.c.o.requires:
+
+.PHONY : CMakeFiles/COMP20007Project2.dir/priorityqueue.c.o.requires
+
+CMakeFiles/COMP20007Project2.dir/priorityqueue.c.o.provides: CMakeFiles/COMP20007Project2.dir/priorityqueue.c.o.requires
+	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/priorityqueue.c.o.provides.build
+.PHONY : CMakeFiles/COMP20007Project2.dir/priorityqueue.c.o.provides
+
+CMakeFiles/COMP20007Project2.dir/priorityqueue.c.o.provides.build: CMakeFiles/COMP20007Project2.dir/priorityqueue.c.o
+
+
+CMakeFiles/COMP20007Project2.dir/testgraph.c.o: CMakeFiles/COMP20007Project2.dir/flags.make
+CMakeFiles/COMP20007Project2.dir/testgraph.c.o: ../testgraph.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/COMP20007Project2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/COMP20007Project2.dir/testgraph.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/COMP20007Project2.dir/testgraph.c.o   -c /mnt/c/COMP20007Project2/testgraph.c
+
+CMakeFiles/COMP20007Project2.dir/testgraph.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/COMP20007Project2.dir/testgraph.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/COMP20007Project2/testgraph.c > CMakeFiles/COMP20007Project2.dir/testgraph.c.i
+
+CMakeFiles/COMP20007Project2.dir/testgraph.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/COMP20007Project2.dir/testgraph.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/COMP20007Project2/testgraph.c -o CMakeFiles/COMP20007Project2.dir/testgraph.c.s
+
+CMakeFiles/COMP20007Project2.dir/testgraph.c.o.requires:
+
+.PHONY : CMakeFiles/COMP20007Project2.dir/testgraph.c.o.requires
+
+CMakeFiles/COMP20007Project2.dir/testgraph.c.o.provides: CMakeFiles/COMP20007Project2.dir/testgraph.c.o.requires
+	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/testgraph.c.o.provides.build
+.PHONY : CMakeFiles/COMP20007Project2.dir/testgraph.c.o.provides
+
+CMakeFiles/COMP20007Project2.dir/testgraph.c.o.provides.build: CMakeFiles/COMP20007Project2.dir/testgraph.c.o
 
 
 # Object files for target COMP20007Project2
 COMP20007Project2_OBJECTS = \
-"CMakeFiles/COMP20007Project2.dir/max_heap.c.o" \
-"CMakeFiles/COMP20007Project2.dir/mytest.c.o"
+"CMakeFiles/COMP20007Project2.dir/graph.c.o" \
+"CMakeFiles/COMP20007Project2.dir/list.c.o" \
+"CMakeFiles/COMP20007Project2.dir/priorityqueue.c.o" \
+"CMakeFiles/COMP20007Project2.dir/testgraph.c.o"
 
 # External object files for target COMP20007Project2
 COMP20007Project2_EXTERNAL_OBJECTS =
 
-COMP20007Project2: CMakeFiles/COMP20007Project2.dir/max_heap.c.o
-COMP20007Project2: CMakeFiles/COMP20007Project2.dir/mytest.c.o
+COMP20007Project2: CMakeFiles/COMP20007Project2.dir/graph.c.o
+COMP20007Project2: CMakeFiles/COMP20007Project2.dir/list.c.o
+COMP20007Project2: CMakeFiles/COMP20007Project2.dir/priorityqueue.c.o
+COMP20007Project2: CMakeFiles/COMP20007Project2.dir/testgraph.c.o
 COMP20007Project2: CMakeFiles/COMP20007Project2.dir/build.make
 COMP20007Project2: CMakeFiles/COMP20007Project2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/COMP20007Project2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable COMP20007Project2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/c/COMP20007Project2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable COMP20007Project2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/COMP20007Project2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -125,8 +177,10 @@ CMakeFiles/COMP20007Project2.dir/build: COMP20007Project2
 
 .PHONY : CMakeFiles/COMP20007Project2.dir/build
 
-CMakeFiles/COMP20007Project2.dir/requires: CMakeFiles/COMP20007Project2.dir/max_heap.c.o.requires
-CMakeFiles/COMP20007Project2.dir/requires: CMakeFiles/COMP20007Project2.dir/mytest.c.o.requires
+CMakeFiles/COMP20007Project2.dir/requires: CMakeFiles/COMP20007Project2.dir/graph.c.o.requires
+CMakeFiles/COMP20007Project2.dir/requires: CMakeFiles/COMP20007Project2.dir/list.c.o.requires
+CMakeFiles/COMP20007Project2.dir/requires: CMakeFiles/COMP20007Project2.dir/priorityqueue.c.o.requires
+CMakeFiles/COMP20007Project2.dir/requires: CMakeFiles/COMP20007Project2.dir/testgraph.c.o.requires
 
 .PHONY : CMakeFiles/COMP20007Project2.dir/requires
 
