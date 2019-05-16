@@ -123,113 +123,59 @@ COMP20007Project2/fast:
 	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/build
 .PHONY : COMP20007Project2/fast
 
-graph.o: graph.c.o
+heaptest.o: heaptest.c.o
 
-.PHONY : graph.o
-
-# target to build an object file
-graph.c.o:
-	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/graph.c.o
-.PHONY : graph.c.o
-
-graph.i: graph.c.i
-
-.PHONY : graph.i
-
-# target to preprocess a source file
-graph.c.i:
-	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/graph.c.i
-.PHONY : graph.c.i
-
-graph.s: graph.c.s
-
-.PHONY : graph.s
-
-# target to generate assembly for a file
-graph.c.s:
-	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/graph.c.s
-.PHONY : graph.c.s
-
-list.o: list.c.o
-
-.PHONY : list.o
+.PHONY : heaptest.o
 
 # target to build an object file
-list.c.o:
-	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/list.c.o
-.PHONY : list.c.o
+heaptest.c.o:
+	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/heaptest.c.o
+.PHONY : heaptest.c.o
 
-list.i: list.c.i
+heaptest.i: heaptest.c.i
 
-.PHONY : list.i
+.PHONY : heaptest.i
 
 # target to preprocess a source file
-list.c.i:
-	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/list.c.i
-.PHONY : list.c.i
+heaptest.c.i:
+	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/heaptest.c.i
+.PHONY : heaptest.c.i
 
-list.s: list.c.s
+heaptest.s: heaptest.c.s
 
-.PHONY : list.s
+.PHONY : heaptest.s
 
 # target to generate assembly for a file
-list.c.s:
-	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/list.c.s
-.PHONY : list.c.s
+heaptest.c.s:
+	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/heaptest.c.s
+.PHONY : heaptest.c.s
 
-priorityqueue.o: priorityqueue.c.o
+max_heap.o: max_heap.c.o
 
-.PHONY : priorityqueue.o
+.PHONY : max_heap.o
 
 # target to build an object file
-priorityqueue.c.o:
-	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/priorityqueue.c.o
-.PHONY : priorityqueue.c.o
+max_heap.c.o:
+	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/max_heap.c.o
+.PHONY : max_heap.c.o
 
-priorityqueue.i: priorityqueue.c.i
+max_heap.i: max_heap.c.i
 
-.PHONY : priorityqueue.i
-
-# target to preprocess a source file
-priorityqueue.c.i:
-	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/priorityqueue.c.i
-.PHONY : priorityqueue.c.i
-
-priorityqueue.s: priorityqueue.c.s
-
-.PHONY : priorityqueue.s
-
-# target to generate assembly for a file
-priorityqueue.c.s:
-	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/priorityqueue.c.s
-.PHONY : priorityqueue.c.s
-
-testgraph.o: testgraph.c.o
-
-.PHONY : testgraph.o
-
-# target to build an object file
-testgraph.c.o:
-	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/testgraph.c.o
-.PHONY : testgraph.c.o
-
-testgraph.i: testgraph.c.i
-
-.PHONY : testgraph.i
+.PHONY : max_heap.i
 
 # target to preprocess a source file
-testgraph.c.i:
-	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/testgraph.c.i
-.PHONY : testgraph.c.i
+max_heap.c.i:
+	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/max_heap.c.i
+.PHONY : max_heap.c.i
 
-testgraph.s: testgraph.c.s
+max_heap.s: max_heap.c.s
 
-.PHONY : testgraph.s
+.PHONY : max_heap.s
 
 # target to generate assembly for a file
-testgraph.c.s:
-	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/testgraph.c.s
-.PHONY : testgraph.c.s
+max_heap.c.s:
+	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/max_heap.c.s
+.PHONY : max_heap.c.s
 
 # Help Target
 help:
@@ -240,18 +186,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... COMP20007Project2"
 	@echo "... edit_cache"
-	@echo "... graph.o"
-	@echo "... graph.i"
-	@echo "... graph.s"
-	@echo "... list.o"
-	@echo "... list.i"
-	@echo "... list.s"
-	@echo "... priorityqueue.o"
-	@echo "... priorityqueue.i"
-	@echo "... priorityqueue.s"
-	@echo "... testgraph.o"
-	@echo "... testgraph.i"
-	@echo "... testgraph.s"
+	@echo "... heaptest.o"
+	@echo "... heaptest.i"
+	@echo "... heaptest.s"
+	@echo "... max_heap.o"
+	@echo "... max_heap.i"
+	@echo "... max_heap.s"
 .PHONY : help
 
 

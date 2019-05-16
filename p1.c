@@ -60,8 +60,11 @@ void problem_1_a() {
 void problem_1_b() {
     int* heap = NULL;
     int size = readInputToArray(&heap);
-    buildHeap(heap, size);
-    //convertRight(heap, size);
+    buildRightHandedHeap(heap, size);
+    int i;
+    for (i=1;i<=size;i++){
+        printf("%d\n", heap[i]);
+    }
     free(heap);
     heap = NULL;
 }

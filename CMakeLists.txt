@@ -6,12 +6,9 @@ set(CMAKE_C_STANDARD 11)
 include_directories(.)
 
 add_executable(COMP20007Project2
-        graph.c
-        graph.h
-        list.c
-        list.h
-        priorityqueue.c
-        priorityqueue.h
-        testgraph.c
+        max_heap.c
+        max_heap.h
+        heaptest.c
+        max_heap.h
         )
 target_link_libraries(COMP20007Project2 m)

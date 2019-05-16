@@ -16,3 +16,4 @@ int readInputToArray(int** output);
 void siftdown(int* heap, int size, int p);
 void buildHeap(int* array, int size);
 void removeMax(int* heap, int* size);
+void buildRightHandedHeap(int* array, int size);

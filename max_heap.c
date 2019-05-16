@@ -31,6 +31,37 @@ int readInputToArray(int** output) {
     }
     return size;
 }
+void buildRightHandedHeap(int* array, int size) {
+    buildHeap(array, size);
+    int height = log2(size + 1);
+    int m = 1;
+    while (m<=(int)pow(2,height)){
+        int p;
+        for (p=m;p>=(m+1)/2 && left_child(p) < size;p--){
+            if (array[left_child(p)] > array[right_child(p)]){
+                swap(&array[left_child(p)], &array[right_child(p)]);
+                siftdown(array, size, left_child(p));
+            }
+        }
+        m = 2*m + 1;
+    }
+ //       printf("i: %d", (int)pow(2,i)-1);
+//        int p = (int)pow(2,i)-1;
+  //      for (p; p > pow(2,height-1); p--) {
+  //          printf("p: %d", p);
+  //      }
+            //      siftdown(array, size, p);
+ //   }
+    //int m = pow(2, height - 1);
+    //while (m < size) {
+     //   int p = 0;
+     //   for (p = m; p <= 2 * m - 1; p++) {
+      //      siftdown(array, size, p);
+       // }
+   // }
+}
+
+
 
 void buildHeap(int* array, int size){
     int height = log2(size+1);
