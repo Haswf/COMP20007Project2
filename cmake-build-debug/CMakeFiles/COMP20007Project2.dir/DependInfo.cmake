@@ -4,8 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/mnt/c/COMP20007Project2/heaptest.c" "/mnt/c/COMP20007Project2/cmake-build-debug/CMakeFiles/COMP20007Project2.dir/heaptest.c.o"
-  "/mnt/c/COMP20007Project2/max_heap.c" "/mnt/c/COMP20007Project2/cmake-build-debug/CMakeFiles/COMP20007Project2.dir/max_heap.c.o"
+  "/mnt/c/COMP20007Project2/p2b.c" "/mnt/c/COMP20007Project2/cmake-build-debug/CMakeFiles/COMP20007Project2.dir/p2b.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

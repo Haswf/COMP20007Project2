@@ -123,59 +123,32 @@ COMP20007Project2/fast:
 	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/build
 .PHONY : COMP20007Project2/fast
 
-heaptest.o: heaptest.c.o
+p2b.o: p2b.c.o
 
-.PHONY : heaptest.o
-
-# target to build an object file
-heaptest.c.o:
-	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/heaptest.c.o
-.PHONY : heaptest.c.o
-
-heaptest.i: heaptest.c.i
-
-.PHONY : heaptest.i
-
-# target to preprocess a source file
-heaptest.c.i:
-	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/heaptest.c.i
-.PHONY : heaptest.c.i
-
-heaptest.s: heaptest.c.s
-
-.PHONY : heaptest.s
-
-# target to generate assembly for a file
-heaptest.c.s:
-	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/heaptest.c.s
-.PHONY : heaptest.c.s
-
-max_heap.o: max_heap.c.o
-
-.PHONY : max_heap.o
+.PHONY : p2b.o
 
 # target to build an object file
-max_heap.c.o:
-	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/max_heap.c.o
-.PHONY : max_heap.c.o
+p2b.c.o:
+	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/p2b.c.o
+.PHONY : p2b.c.o
 
-max_heap.i: max_heap.c.i
+p2b.i: p2b.c.i
 
-.PHONY : max_heap.i
+.PHONY : p2b.i
 
 # target to preprocess a source file
-max_heap.c.i:
-	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/max_heap.c.i
-.PHONY : max_heap.c.i
+p2b.c.i:
+	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/p2b.c.i
+.PHONY : p2b.c.i
 
-max_heap.s: max_heap.c.s
+p2b.s: p2b.c.s
 
-.PHONY : max_heap.s
+.PHONY : p2b.s
 
 # target to generate assembly for a file
-max_heap.c.s:
-	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/max_heap.c.s
-.PHONY : max_heap.c.s
+p2b.c.s:
+	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/p2b.c.s
+.PHONY : p2b.c.s
 
 # Help Target
 help:
@@ -186,12 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... COMP20007Project2"
 	@echo "... edit_cache"
-	@echo "... heaptest.o"
-	@echo "... heaptest.i"
-	@echo "... heaptest.s"
-	@echo "... max_heap.o"
-	@echo "... max_heap.i"
-	@echo "... max_heap.s"
+	@echo "... p2b.o"
+	@echo "... p2b.i"
+	@echo "... p2b.s"
 .PHONY : help
 
 

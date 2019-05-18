@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/COMP20007Project2.dir/max_heap.c.o"
-  "CMakeFiles/COMP20007Project2.dir/heaptest.c.o"
+  "CMakeFiles/COMP20007Project2.dir/p2b.c.o"
   "COMP20007Project2.pdb"
   "COMP20007Project2"
 )

@@ -6,25 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/COMP20007Project2/heaptest.c
-stdio.h
--
-stdlib.h
--
-max_heap.h
-/mnt/c/COMP20007Project2/max_heap.h
-
-/mnt/c/COMP20007Project2/max_heap.c
-max_heap.h
-/mnt/c/COMP20007Project2/max_heap.h
-
-/mnt/c/COMP20007Project2/max_heap.h
-stdlib.h
+/mnt/c/COMP20007Project2/p2b.c
+p2b.h
+/mnt/c/COMP20007Project2/p2b.h
+limits.h
 -
 stdio.h
 -
-math.h
+stdlib.h
 -
 string.h
 -
+
+/mnt/c/COMP20007Project2/p2b.h
 
