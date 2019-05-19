@@ -132,6 +132,7 @@ void dijkstras(Graph *graph, int source) {
 
 /* TODO: Implement your solution to Problem 2.b. in this function. */
 void problem_2_b() {
+    /* Let us create the graph shown in above diagram*/
     int vertexCount, start, end, k;
 
     scanf("%d %d", &vertexCount, &k);
@@ -170,63 +171,78 @@ int min(int i, int j){
     }
 }
 // A naive recursive function to count walks from u to v with k edges
-int shortestPath(int **graph, int u, int v, int k, int vertexCount){
+int shortestPath(int **graph, int u, int v, int k, int vertexCount) {
     // Table to be filled up using DP. The value sp[i][j][e] will store
     // weight of the shortest path from i to j with exactly k edges
-    int shortestPAth[vertexCount][vertexCount][k+1];
-    int previous[vertexCount][vertexCount][k+1];
+    int shortestPath[vertexCount][vertexCount][k + 1];
+    int previous[vertexCount][vertexCount][k + 1];
 
     // Loop for number of edges from 0 to
-    for (int edge = 0; edge <= k; edge++){
-        for (int from = 0; from < vertexCount; from++){
-            for (int to = 0; to < vertexCount; to++){
+    for (int edge = 0; edge <= k; edge++) {
+        for (int from = 0; from < vertexCount; from++) {
+            for (int to = 0; to < vertexCount; to++) {
                 // initialize value
-                shortestPAth[from][to][edge] = INF;
-                previous[from][to][edge]= NO_PREV;
+                shortestPath[from][to][edge] = INF;
+                previous[from][to][edge] = NO_PREV;
                 // from base cases
-                if (edge == 0 && from == to)
-                    shortestPAth[from][to][edge] = 0;
-                if (edge == 1 && graph[from][to] != INF)
-                    shortestPAth[from][to][edge] = graph[from][to];
+                if (edge == 0 && from == to) {
+                    shortestPath[from][to][edge] = 0;
+                    previous[from][to][edge] = from;
+                }
+
+                if (edge == 1 && graph[from][to] != INF) {
+                    shortestPath[from][to][edge] = graph[from][to];
+                    previous[from][to][edge] = from;
+                }
 
                 //go to adjacent only when number of edges is more than 1
-                if (edge > 1){
-                    for (int step = 0; step < vertexCount; step++){
+                if (edge > 1) {
+                    for (int step = 0; step < vertexCount; step++) {
                         // There should be an edge from i to a and a
                         // should not be same as either i or j
-                        if (graph[from][step] != INF && from != step && to!= step && shortestPAth[step][to][edge-1] != INF) {
+                        if (graph[from][step] != INF && from != step && to != step &&
+                            shortestPath[step][to][edge - 1] != INF) {
                             //printf("Edge: %d, from %d to %d via %d \n", edge, from, to, step);
-                            if (shortestPAth[from][to][edge] > graph[from][step] + shortestPAth[step][to][edge - 1]){
-                                previous[from][to][edge] = step;
+                            if (shortestPath[from][to][edge] > graph[from][step] + shortestPath[step][to][edge - 1]) {
+                                previous[from][to][edge] = previous[step][to][edge - 1];
                             }
-                            shortestPAth[from][to][edge] = min(shortestPAth[from][to][edge], graph[from][step] + shortestPAth[step][to][edge - 1]);
+                            shortestPath[from][to][edge] = min(shortestPath[from][to][edge],
+                                                               graph[from][step] + shortestPath[step][to][edge - 1]);
                         }
                     }
                 }
             }
         }
     }
-    int path[vertexCount];
-    int count = 0;
-    path[count++] = v;
-    int prev = previous[u][v][k];
-    while (prev >= 0){
-        path[count++] = prev;
-        int from;
-        for (from=0; from<vertexCount;from++){
-            if (previous[from][prev][count]){
-                path[count] = from;
-                prev = from;
-                break;
-            }
+    int prev_node = vertexCount-1;
+    int min = INF;
+    int shortest_edge = NO_PREV;
+    int i;
+    int path[k+1];
+    for (i = 0; i <= k; i++) {
+        int path_length = shortestPath[u][prev_node][i];
+        if (path_length < min) {
+            min = path_length;
+            shortest_edge = i;
         }
     }
-    printf("%d\n", shortestPAth[u][v][k]);
-    printf("%d\n", k);
-    path[count++] = u;
-    for (int i=count-1; i>=0; i--){
-        printf("%d\n", path[i]);
+    int count = k;
+    while (prev_node > 0) {
+        path[count--] = prev_node;
+        prev_node = previous[u][prev_node][shortest_edge];
+        shortest_edge--;
     }
-    return shortestPAth[u][v][k];
-}
+    if (shortestPath[u][v][k] == INF){
+        printf("No Path");
+    }
+    else{
+        printf("%d\n", shortestPath[u][v][k]);
+        printf("%d\n", k);
 
+        int j;
+        for (j=0;j<=k;j++){
+            printf("%d\n", path[j]);
+        }
+    }
+    return shortestPath[u][v][k];
+}
