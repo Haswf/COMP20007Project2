@@ -18,7 +18,7 @@ P2_FILES = p2.c graph.c priorityqueue.c list.c
 p2: $(P2_FILES)
 	$(CC) $(CFLAGS) -o p2 $(P2_FILES)
 
-P3_FILES = p3.c
+P3_FILES = p3.c tree.c
 p3: $(P3_FILES)
 	$(CC) $(CFLAGS) -o p3 $(P3_FILES)
 

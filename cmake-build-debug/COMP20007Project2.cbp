@@ -80,10 +80,10 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/mnt/c/COMP20007Project2/p2b.c">
+		<Unit filename="/mnt/c/COMP20007Project2/tree.c">
 			<Option target="COMP20007Project2"/>
 		</Unit>
-		<Unit filename="/mnt/c/COMP20007Project2/p2b.h">
+		<Unit filename="/mnt/c/COMP20007Project2/tree.h">
 			<Option target="COMP20007Project2"/>
 		</Unit>
 		<Unit filename="/mnt/c/COMP20007Project2/CMakeLists.txt">
