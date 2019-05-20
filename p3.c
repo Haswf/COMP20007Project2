@@ -5,8 +5,11 @@
  *
  * Written by: [ YOUR NAME HERE ]
  */
+
 #include "tree.h"
+#include <stdlib.h>
 #include <stdio.h>
+#include <assert.h>
 
 /* --- DO NOT CHANGE THE CODE BELOW THIS LINE --- */
 
@@ -21,25 +24,26 @@ int main(int argc, char **argv) {
 
 /* TODO: Implement your solution to Problem 3 in this function. */
 void problem_3() {
-    Node* tree = NULL;
+    tNode* tree = NULL;
     int* arr = NULL;
     int count = readArray(&arr);
     int i;
     for (i=0;i<count;i++){
         tree = insert(tree, arr[i]);
-    }
+    };
+
     int output[count];
     //inOrderTraverse(tree);
     printf("%d\n", countTree(tree));
-    printf("%d\n", maxDepth(tree));
+    printf("%d\n", height(tree));
     ;
     int output_count = storeValue(tree, output);
     //for (int j=0; j<output_count;j++){
     //    printf("%d", output[j]);
     //}
-    Node* balanced = sortedArrayToBST(output, 0, output_count-1);
-    int line = printLine(balanced);
-    printf("%d\n", line);
-    printLevelOrder(balanced);
+    tNode* balanced = sortedArrayToBST(output, 0, output_count-1);
+    //int line = printLine(balanced);
+    //rintf("%d\n", line);
+    levelOrderTraverse(balanced);
     free_tree(tree);
-}
+};

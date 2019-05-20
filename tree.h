@@ -5,22 +5,19 @@
 #ifndef COMP20007PROJECT2_TREE_H
 #define COMP20007PROJECT2_TREE_H
 
+typedef struct node_t tNode;
 
-typedef struct node_t Node;
-Node* recursive_insert(Node* root, Node* new);
-Node* searchTree(Node* tree, int key);
+
+tNode* recursive_insert(tNode* root, tNode* new);
+tNode* searchTree(tNode* tree, int key);
 int readArray(int** arr);
-int maxDepth(Node* node);
-void traverseTree(Node* root);
-Node* sortedArrayToBST(int arr[], int start, int end);
-void printGivenLevel(Node* root, int level, int* n);
-int printLevelOrder(Node* root);
-int printLine(Node* root);
-void CountGivenLine(Node* root, int level, int* n);
-Node* insert(Node* root, int data);
-Node* newNode(int data);
-int storeValue(Node *root, int* sorted);
-void free_tree(Node *tree);
-int countTree(Node *root);
-
+int height(tNode* node);
+void traverseTree(tNode* root);
+tNode* sortedArrayToBST(int arr[], int start, int end);
+tNode* insert(tNode* root, int data);
+tNode* newNode(int data);
+int storeValue(tNode *root, int* sorted);
+void free_tree(tNode *tree);
+int countTree(tNode *root);
+void levelOrderTraverse(tNode *root);
 #endif //COMP20007PROJECT2_TREE_H

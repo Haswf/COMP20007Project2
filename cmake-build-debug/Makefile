@@ -123,6 +123,87 @@ COMP20007Project2/fast:
 	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/build
 .PHONY : COMP20007Project2/fast
 
+deque.o: deque.c.o
+
+.PHONY : deque.o
+
+# target to build an object file
+deque.c.o:
+	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/deque.c.o
+.PHONY : deque.c.o
+
+deque.i: deque.c.i
+
+.PHONY : deque.i
+
+# target to preprocess a source file
+deque.c.i:
+	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/deque.c.i
+.PHONY : deque.c.i
+
+deque.s: deque.c.s
+
+.PHONY : deque.s
+
+# target to generate assembly for a file
+deque.c.s:
+	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/deque.c.s
+.PHONY : deque.c.s
+
+dlist.o: dlist.c.o
+
+.PHONY : dlist.o
+
+# target to build an object file
+dlist.c.o:
+	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/dlist.c.o
+.PHONY : dlist.c.o
+
+dlist.i: dlist.c.i
+
+.PHONY : dlist.i
+
+# target to preprocess a source file
+dlist.c.i:
+	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/dlist.c.i
+.PHONY : dlist.c.i
+
+dlist.s: dlist.c.s
+
+.PHONY : dlist.s
+
+# target to generate assembly for a file
+dlist.c.s:
+	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/dlist.c.s
+.PHONY : dlist.c.s
+
+p3.o: p3.c.o
+
+.PHONY : p3.o
+
+# target to build an object file
+p3.c.o:
+	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/p3.c.o
+.PHONY : p3.c.o
+
+p3.i: p3.c.i
+
+.PHONY : p3.i
+
+# target to preprocess a source file
+p3.c.i:
+	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/p3.c.i
+.PHONY : p3.c.i
+
+p3.s: p3.c.s
+
+.PHONY : p3.s
+
+# target to generate assembly for a file
+p3.c.s:
+	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/p3.c.s
+.PHONY : p3.c.s
+
 tree.o: tree.c.o
 
 .PHONY : tree.o
@@ -159,6 +240,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... COMP20007Project2"
 	@echo "... edit_cache"
+	@echo "... deque.o"
+	@echo "... deque.i"
+	@echo "... deque.s"
+	@echo "... dlist.o"
+	@echo "... dlist.i"
+	@echo "... dlist.s"
+	@echo "... p3.o"
+	@echo "... p3.i"
+	@echo "... p3.s"
 	@echo "... tree.o"
 	@echo "... tree.i"
 	@echo "... tree.s"

@@ -2,24 +2,26 @@
 // Created by Has on 20/05/2019.
 //
 
+#include "deque.h"
 #include "tree.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <assert.h>
 
-static void recursiveStoreValue(Node *root, int* sorted, int* n);
-static Node* recursiveSearchTree(Node* node, int key);
-static void recursive_free_tree(Node *root);
-static Node* recursiveInsert(Node* root, Node* new);
-static void recursiveInOrder(Node* root);
-static void recursive_count_tree(Node* root, int* count);
-static void recursive_count_tree(Node* root, int* count);
-
 struct node_t {
     int value;
-    Node* left;
-    Node* right;
+    tNode* left;
+    tNode* right;
 };
+
+
+static void recursiveStoreValue(tNode *root, int* sorted, int* n);
+static tNode* recursiveSearchTree(tNode* tnode, int key);
+static void recursive_free_tree(tNode *root);
+static tNode* recursiveInsert(tNode* root, tNode* new);
+static void recursiveInOrder(tNode* root);
+static void recursive_count_tree(tNode* root, int* count);
+static void recursive_count_tree(tNode* root, int* count);
 
 int readArray(int** arr){
     int count;
@@ -32,16 +34,16 @@ int readArray(int** arr){
     return count;
 }
 
-Node* newNode(int data){
-    Node* new = (Node*)malloc(sizeof(Node));
+tNode* newtNode(int data){
+    tNode* new = (tNode*)malloc(sizeof(tNode));
     new->value = data;
     new->left = NULL;
     new->right = NULL;
     return new;
 }
 
-Node* insert(Node* root, int data){
-    Node* new = newNode(data);
+tNode* insert(tNode* root, int data){
+    tNode* new = newtNode(data);
     //printf("%d %p", data, searchTree(root, data));
     if (!root ||!searchTree(root, data)){
         root = recursiveInsert(root, new);
@@ -50,7 +52,7 @@ Node* insert(Node* root, int data){
     return root;
 }
 
-static Node* recursiveInsert(Node* root, Node* new){
+static tNode* recursiveInsert(tNode* root, tNode* new){
     if (root==NULL){
         return new;
     }
@@ -62,18 +64,17 @@ static Node* recursiveInsert(Node* root, Node* new){
     }
 }
 
-
-Node* searchTree(Node* tree, int key){
+tNode* searchTree(tNode* tree, int key){
     assert(tree);
     return recursiveSearchTree(tree, key);
 }
 
-void inOrderTraverse(Node* root){
+void inOrderTraverse(tNode* root){
     assert(root);
     recursiveInOrder(root);
 }
 
-static void recursiveInOrder(Node* root) {
+static void recursiveInOrder(tNode* root) {
     if (root) {
         recursiveInOrder(root->left);
         printf("%d", root->value);
@@ -81,29 +82,29 @@ static void recursiveInOrder(Node* root) {
     }
 }
 
-static Node* recursiveSearchTree(Node* node, int key){
-    if (!node){
+static tNode* recursiveSearchTree(tNode* tnode, int key){
+    if (!tnode){
         return NULL;
     }
-    if (node->value > key){
-        recursiveSearchTree(node->left, key);
+    if (tnode->value > key){
+        recursiveSearchTree(tnode->left, key);
     }
-    else if (node->value < key){
-        recursiveSearchTree(node->right, key);
+    else if (tnode->value < key){
+        recursiveSearchTree(tnode->right, key);
     }
     else {
-        return node;
+        return tnode;
     }
 }
 
-int storeValue(Node *root, int* sorted){
+int storeValue(tNode *root, int* sorted){
     assert(root);
     int n = 0;
     recursiveStoreValue(root, sorted, &n);
     return n;
 }
 
-static void recursiveStoreValue(Node *root, int* sorted, int* n) {
+static void recursiveStoreValue(tNode *root, int* sorted, int* n) {
     if (root) {
         recursiveStoreValue(root->left, sorted, n);
         sorted[(*n)++] = root->value;
@@ -113,12 +114,12 @@ static void recursiveStoreValue(Node *root, int* sorted, int* n) {
 
 /* Release all memory space associated with the tree
    structure. */
-void free_tree(Node *tree) {
+void free_tree(tNode *tree) {
     assert(tree!=NULL);
     recursive_free_tree(tree);
 }
 
-static void recursive_free_tree(Node *root) {
+static void recursive_free_tree(tNode *root) {
     if (root) {
         recursive_free_tree(root->left);
         recursive_free_tree(root->right);
@@ -126,15 +127,13 @@ static void recursive_free_tree(Node *root) {
     }
 }
 
-
-
-int maxDepth(Node* node){
-    if (node == NULL)
+int height(tNode* tnode){
+    if (tnode == NULL)
         return 0;
     else{
         /* compute the depth of each subtree */
-        int lDepth = maxDepth(node->left);
-        int rDepth = maxDepth(node->right);
+        int lDepth = height(tnode->left);
+        int rDepth = height(tnode->right);
 
         /* use the larger one */
         if (lDepth > rDepth)
@@ -143,15 +142,15 @@ int maxDepth(Node* node){
     }
 }
 
-Node* sortedArrayToBST(int arr[], int start, int end)
+tNode* sortedArrayToBST(int arr[], int start, int end)
 {
     /* Base Case */
     if (start > end)
         return NULL;
 
     /* Get the middle element and make it root */
-    int mid = (start + end+1)/2;
-    Node *root = newNode(arr[mid]);
+    int mid = (start + end +1)/2;
+    tNode *root = newtNode(arr[mid]);
 
     /* Recursively construct the left subtree and make it
        left child of root */
@@ -164,63 +163,33 @@ Node* sortedArrayToBST(int arr[], int start, int end)
     return root;
 }
 
-int printLevelOrder(Node* root)
-{
-    int n = 0;
-    int h = maxDepth(root);
-    int i;
-    for (i = 1; i <= h; i++)
-        printGivenLevel(root, i, &n);
-    return n;
-}
-
-/* Print nodes at a given level */
-void printGivenLevel(Node* root, int level, int* n) {
-    if (root == NULL) {
-        printf("-1\n");
-        (*n)++;
-        return;
-    }
-    if (level == 1) {
-        printf("%d\n", root->value);
-        (*n)++;
-    } else if (level > 1) {
-        printGivenLevel(root->left, level - 1, n);
-        printGivenLevel(root->right, level - 1, n);
+void levelOrderTraverse(tNode* root){
+    Deque* q = new_deque();
+    deque_insert(q, root);
+    while (deque_size(q) > 0){
+        tNode* curr = deque_pop(q);
+        if (curr == NULL)
+            return;
+        else{
+            printf("%d\n", curr->value);
+            if(curr->left){
+                deque_insert(q, curr->left);
+            }
+            if(curr->right){
+                deque_insert(q, curr->right);
+            }
+        }
     }
 }
 
-int printLine(Node* root) {
-    int n = 0;
-    int h = maxDepth(root);
-    int i;
-    for (i = 1; i <= h; i++)
-        CountGivenLine(root, i, &n);
-    return n;
-}
-
-void CountGivenLine(Node* root, int level, int* n){
-    if (root == NULL){
-        return;
-    }
-    if (level == 1){
-        (*n)++;
-    }
-    else if (level > 1){
-        CountGivenLine(root->left, level-1, n);
-        CountGivenLine(root->right, level-1, n);
-    }
-}
-
-
-int countTree(Node *root){
+int countTree(tNode *root){
     assert(root!=NULL);
     int count = 0;
     recursive_count_tree(root, &count);
     return count;
 }
 
-static void recursive_count_tree(Node* root, int* count){
+static void recursive_count_tree(tNode* root, int* count){
     if (root) // if root exist
     {
         recursive_count_tree(root->left, count);
@@ -231,26 +200,27 @@ static void recursive_count_tree(Node* root, int* count){
 
 
 //int main(int argc, char* argv[]){
-//    Node* tree = NULL;
+//    tNode* tree = NULL;
 //    int* arr = NULL;
 //    int count = readArray(&arr);
 //    int i;
 //    for (i=0;i<count;i++){
 //        tree = insert(tree, arr[i]);
-//    }
+//    };
+//
 //    int output[count];
 //    //inOrderTraverse(tree);
 //    printf("%d\n", countTree(tree));
-//    printf("%d\n", maxDepth(tree));
-//;
+//    printf("%d\n", height(tree));
+//    ;
 //    int output_count = storeValue(tree, output);
 //    //for (int j=0; j<output_count;j++){
 //    //    printf("%d", output[j]);
 //    //}
-//    Node* balanced = sortedArrayToBST(output, 0, output_count-1);
-//    int line = printLine(balanced);
-//    printf("%d\n", line);
-//    printLevelOrder(balanced);
+//    tNode* balanced = sortedArrayToBST(output, 0, output_count-1);
+//    //int line = printLine(balanced);
+//    //rintf("%d\n", line);
+//    levelOrderTraverse(balanced);
 //    free_tree(tree);
 //    return 0;
 //};

@@ -80,6 +80,21 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/mnt/c/COMP20007Project2/deque.c">
+			<Option target="COMP20007Project2"/>
+		</Unit>
+		<Unit filename="/mnt/c/COMP20007Project2/deque.h">
+			<Option target="COMP20007Project2"/>
+		</Unit>
+		<Unit filename="/mnt/c/COMP20007Project2/dlist.c">
+			<Option target="COMP20007Project2"/>
+		</Unit>
+		<Unit filename="/mnt/c/COMP20007Project2/dlist.h">
+			<Option target="COMP20007Project2"/>
+		</Unit>
+		<Unit filename="/mnt/c/COMP20007Project2/p3.c">
+			<Option target="COMP20007Project2"/>
+		</Unit>
 		<Unit filename="/mnt/c/COMP20007Project2/tree.c">
 			<Option target="COMP20007Project2"/>
 		</Unit>
