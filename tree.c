@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <assert.h>
+#include <math.h>
 
 struct node_t {
     int value;
@@ -145,11 +146,14 @@ int height(tNode* tnode){
 tNode* sortedArrayToBST(int arr[], int start, int end)
 {
     /* Base Case */
-    if (start > end)
-        return NULL;
+    if (start > end){
+        tNode* nil = newtNode(-1);
+        return nil;
+
+    }
 
     /* Get the middle element and make it root */
-    int mid = (start + end +1)/2;
+    int mid = (start + end)/2;
     tNode *root = newtNode(arr[mid]);
 
     /* Recursively construct the left subtree and make it
@@ -163,22 +167,35 @@ tNode* sortedArrayToBST(int arr[], int start, int end)
     return root;
 }
 
-void levelOrderTraverse(tNode* root){
-    Deque* q = new_deque();
+void levelOrderTraverse(tNode* root) {
+    Deque *q = new_deque();
     deque_insert(q, root);
-    while (deque_size(q) > 0){
-        tNode* curr = deque_pop(q);
-        if (curr == NULL)
-            return;
-        else{
-            printf("%d\n", curr->value);
-            if(curr->left){
-                deque_insert(q, curr->left);
-            }
-            if(curr->right){
-                deque_insert(q, curr->right);
-            }
+    int array[(int) pow(2, height(root)-1)];
+
+    int n = 0;
+    while (deque_size(q) > 0) {
+        tNode *curr = deque_pop(q);
+        printf("arr[%d]=%d\n", n, curr->value);
+        array[n++] = curr->value;
+        if (curr->left) {
+            deque_insert(q, curr->left);
         }
+        if (curr->right) {
+            deque_insert(q, curr->right);
+        }
+    }
+
+  //  printf("n %d", n-1);
+    //n = n-1;
+    //while (array[n] == -1){
+    //    printf("arr[%d]= %d \n", n, array[n]);
+     //   n--;
+    //}
+    printf("%d", n);
+
+    int i;
+    for (i=0;i<n;i++){
+        printf("\n%d", array[i]);
     }
 }
 

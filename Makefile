@@ -20,7 +20,7 @@ p2: $(P2_FILES)
 
 P3_FILES = p3.c tree.c deque.c dlist.c
 p3: $(P3_FILES)
-	$(CC) $(CFLAGS) -o p3 $(P3_FILES)
+	$(CC) $(CFLAGS) -o p3 $(P3_FILES) -lm
 
 .PHONY: clean
 

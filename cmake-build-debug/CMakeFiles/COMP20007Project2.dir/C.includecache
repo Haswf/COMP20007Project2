@@ -57,6 +57,8 @@ stdio.h
 -
 assert.h
 -
+math.h
+-
 
 /mnt/c/COMP20007Project2/tree.h
 
