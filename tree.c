@@ -170,13 +170,12 @@ tNode* sortedArrayToBST(int arr[], int start, int end)
 void levelOrderTraverse(tNode* root) {
     Deque *q = new_deque();
     deque_insert(q, root);
-    int array[(int) pow(2, height(root)-1)];
+    int array[(int) pow(2, height(root))];
 
-    int n = 0;
+    int length = 0;
     while (deque_size(q) > 0) {
         tNode *curr = deque_pop(q);
-        printf("arr[%d]=%d\n", n, curr->value);
-        array[n++] = curr->value;
+        array[length++] = curr->value;
         if (curr->left) {
             deque_insert(q, curr->left);
         }
@@ -184,18 +183,14 @@ void levelOrderTraverse(tNode* root) {
             deque_insert(q, curr->right);
         }
     }
-
-  //  printf("n %d", n-1);
-    //n = n-1;
-    //while (array[n] == -1){
-    //    printf("arr[%d]= %d \n", n, array[n]);
-     //   n--;
-    //}
-    printf("%d", n);
+    while (array[length-1] == -1){
+        length--;
+    }
+    printf("%d\n", length);
 
     int i;
-    for (i=0;i<n;i++){
-        printf("\n%d", array[i]);
+    for (i=0;i<length;i++){
+        printf("%d\n", array[i]);
     }
 }
 
