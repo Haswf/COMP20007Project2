@@ -18,7 +18,7 @@
 #define NO_PREV -1
 #define INFINITY -1
 #define INF INT_MAX
-
+int readToMatrix(int*** matrix, int* k, char question);
 int shortestPath(int **graph, int u, int v, int k, int vertexCount);
 int min(int i, int j);
 /* --- DO NOT CHANGE THE CODE BELOW THIS LINE --- */
@@ -134,32 +134,11 @@ void dijkstras(Graph *graph, int source) {
 void problem_2_b() {
     /* Let us create the graph shown in above diagram*/
     int vertexCount, start, end, k;
-
-    scanf("%d %d", &vertexCount, &k);
-    int** matrix = (int**)malloc(sizeof(int*)*vertexCount);
-
-    int i;
-    for (i=0;i<vertexCount;i++) {
-        matrix[i] = (int *) malloc(sizeof(int) * vertexCount);
-        int z;
-        for (z = 0; z < vertexCount; z++) {
-            matrix[i][z] = INF;
-        }
-
-        int out_degree = 0;
-        scanf("%d", &out_degree);
-        int j;
-        int end, weight;
-
-        for (j = 0; j < out_degree; j++) {
-            scanf("%d %d", &end, &weight);
-            matrix[i][end] = weight;
-        }
-    }
+    int** matrix = NULL;
+    vertexCount = readToMatrix(&matrix, &k, 'b');
     start =0;
     end = vertexCount - 1;
     shortestPath(matrix, start, end, k, vertexCount);
-    return;
 }
 
 int min(int i, int j){
@@ -170,6 +149,37 @@ int min(int i, int j){
         return i;
     }
 }
+
+int readToMatrix(int*** matrix, int* k, char question) {
+    int vertexCount = 0;
+    if (question == 'a') {
+        scanf("%d", &vertexCount);
+    } else if (question == 'b') {
+        scanf("%d %d", &vertexCount, k);
+    }
+    *matrix = (int **) malloc(sizeof(int *) * vertexCount);
+
+    int i;
+    for (i = 0; i < vertexCount; i++) {
+        (*matrix)[i] = (int *) malloc(sizeof(int) * vertexCount);
+        int z;
+        for (z = 0; z < vertexCount; z++) {
+            (*matrix)[i][z] = INF;
+        }
+
+        int out_degree = 0;
+        scanf("%d", &out_degree);
+        int j;
+        int end, weight;
+
+        for (j = 0; j < out_degree; j++) {
+            scanf("%d %d", &end, &weight);
+            (*matrix)[i][end] = weight;
+        }
+    }
+    return vertexCount;
+}
+
 // A naive recursive function to count walks from u to v with k edges
 int shortestPath(int **graph, int u, int v, int k, int vertexCount) {
     // Table to be filled up using DP. The value sp[i][j][e] will store
