@@ -44,9 +44,9 @@ tNode* newtNode(int data){
 }
 
 tNode* insert(tNode* root, int data){
-    tNode* new = newtNode(data);
     //printf("%d %p", data, searchTree(root, data));
     if (!root ||!searchTree(root, data)){
+        tNode* new = newtNode(data);
         root = recursiveInsert(root, new);
         //printf("%d inserted\n", data);
     }
@@ -150,7 +150,6 @@ tNode* sortedArrayToBST(int arr[], int start, int end)
     if (start > end){
         tNode* nil = newtNode(-1);
         return nil;
-
     }
 
     /* Get the middle element and make it root */
@@ -193,6 +192,7 @@ void levelOrderTraverse(tNode* root) {
     for (i=0;i<length;i++){
         printf("%d\n", array[i]);
     }
+    free_deque(q);
 }
 
 int countTree(tNode *root){

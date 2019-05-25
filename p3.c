@@ -47,4 +47,8 @@ void problem_3() {
     levelOrderTraverse(balanced);
     freeTree(tree);
     freeTree(balanced);
+    free(arr);
+    arr = NULL;
+    tree = NULL;
+    balanced = NULL;
 };

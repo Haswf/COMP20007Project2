@@ -61,6 +61,8 @@ void problem_2_a() {
     readGraph(dag);
     //displayGraph(dag);
     dijkstras(dag, 0);
+    free_graph(dag);
+    dag = NULL;
 }
 
 void dijkstras(Graph *graph, int source) {
@@ -127,6 +129,8 @@ void dijkstras(Graph *graph, int source) {
             printf("%d\n", path[p]);
         }
     }
+    free(queue);
+    queue = NULL;
 }
 
 
@@ -139,6 +143,8 @@ void problem_2_b() {
     start =0;
     end = vertexCount - 1;
     shortestPath(matrix, start, end, k, vertexCount);
+    free(matrix);
+    matrix = NULL;
 }
 
 int min(int i, int j){

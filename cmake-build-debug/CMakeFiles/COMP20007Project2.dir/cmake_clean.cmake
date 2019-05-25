@@ -1,8 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/COMP20007Project2.dir/tree.c.o"
-  "CMakeFiles/COMP20007Project2.dir/dlist.c.o"
-  "CMakeFiles/COMP20007Project2.dir/deque.c.o"
-  "CMakeFiles/COMP20007Project2.dir/p3.c.o"
+  "CMakeFiles/COMP20007Project2.dir/p2b.c.o"
   "COMP20007Project2.pdb"
   "COMP20007Project2"
 )

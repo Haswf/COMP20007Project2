@@ -93,3 +93,44 @@ int shortestPath(int **graph, int u, int v, int k, int vertexCount) {
     }
     return shortestPath[u][v][k];
 }
+
+int readToMatrix(int*** matrix, int* k, char question) {
+    int vertexCount = 0;
+    if (question == 'a') {
+        scanf("%d", &vertexCount);
+    } else if (question == 'b') {
+        scanf("%d %d", &vertexCount, k);
+    }
+    *matrix = (int **) malloc(sizeof(int *) * vertexCount);
+
+    int i;
+    for (i = 0; i < vertexCount; i++) {
+        (*matrix)[i] = (int *) malloc(sizeof(int) * vertexCount);
+        int z;
+        for (z = 0; z < vertexCount; z++) {
+            (*matrix)[i][z] = INF;
+        }
+
+        int out_degree = 0;
+        scanf("%d", &out_degree);
+        int j;
+        int end, weight;
+
+        for (j = 0; j < out_degree; j++) {
+            scanf("%d %d", &end, &weight);
+            (*matrix)[i][end] = weight;
+        }
+    }
+    return vertexCount;
+}
+
+int main(){
+    int vertexCount, start, end, k;
+    int** matrix = NULL;
+    vertexCount = readToMatrix(&matrix, &k, 'b');
+    start =0;
+    end = vertexCount - 1;
+    shortestPath(matrix, start, end, k, vertexCount);
+    free(matrix);
+    matrix = NULL;
+}
