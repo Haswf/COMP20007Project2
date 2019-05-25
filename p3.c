@@ -45,6 +45,6 @@ void problem_3() {
     //int line = printLine(balanced);
     //rintf("%d\n", line);
     levelOrderTraverse(balanced);
-    free_tree(tree);
-    free_tree(balanced);
+    freeTree(tree);
+    freeTree(balanced);
 };

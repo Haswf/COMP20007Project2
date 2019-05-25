@@ -17,8 +17,8 @@ struct node_t {
 
 
 static void recursiveStoreValue(tNode *root, int* sorted, int* n);
-static tNode* recursiveSearchTree(tNode* tnode, int key);
-static void recursive_free_tree(tNode *root);
+static void* recursiveSearchTree(tNode* tnode, int key);
+static void recursiveFreeTree(tNode *root);
 static tNode* recursiveInsert(tNode* root, tNode* new);
 static void recursiveInOrder(tNode* root);
 static void recursive_count_tree(tNode* root, int* count);
@@ -63,6 +63,7 @@ static tNode* recursiveInsert(tNode* root, tNode* new){
     else {
         root->right = recursiveInsert(root->right, new);
     }
+    return root;
 }
 
 tNode* searchTree(tNode* tree, int key){
@@ -83,7 +84,7 @@ static void recursiveInOrder(tNode* root) {
     }
 }
 
-static tNode* recursiveSearchTree(tNode* tnode, int key){
+static void* recursiveSearchTree(tNode* tnode, int key){
     if (!tnode){
         return NULL;
     }
@@ -115,15 +116,15 @@ static void recursiveStoreValue(tNode *root, int* sorted, int* n) {
 
 /* Release all memory space associated with the tree
    structure. */
-void free_tree(tNode *tree) {
+void freeTree(tNode *tree) {
     assert(tree!=NULL);
-    recursive_free_tree(tree);
+    recursiveFreeTree(tree);
 }
 
-static void recursive_free_tree(tNode *root) {
+static void recursiveFreeTree(tNode *root) {
     if (root) {
-        recursive_free_tree(root->left);
-        recursive_free_tree(root->right);
+        recursiveFreeTree(root->left);
+        recursiveFreeTree(root->right);
         free(root);
     }
 }
