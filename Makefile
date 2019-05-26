@@ -10,7 +10,7 @@ ALL    = p1 p2 p3
 
 all: $(ALL)
 
-P1_FILES = p1.c max_heap.c
+P1_FILES = p1.c heap.c
 p1: $(P1_FILES)
 	$(CC) $(CFLAGS) -o p1 $(P1_FILES) -lm 
 

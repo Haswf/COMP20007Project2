@@ -9,7 +9,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "max_heap.h"
+#include "heap.h"
 /* --- DO NOT CHANGE THE CODE BELOW THIS LINE --- */
 
 void problem_1_a();

@@ -9,7 +9,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "max_heap.h"
+#include "heap.h"
 int main(int, char**);
 /* --- DO NOT CHANGE THE CODE BELOW THIS LINE --- */
 
@@ -46,8 +46,11 @@ void print_usage_and_exit(char **argv) {
 /* TODO: Implement your solution to Problem 1.a. in this function. */
 void problem_1_a() {
     int* heap = NULL;
+    // Read input from stdin
     int size = readInputToArray(&heap);
+    // build heap
     buildHeap(heap, size);
+    // print heap
     int i;
     for (i=1;i<=size;i++){
         printf("%d\n", heap[i]);
@@ -59,9 +62,12 @@ void problem_1_a() {
 /* TODO: Implement your solution to Problem 1.b. in this function. */
 void problem_1_b() {
     int* heap = NULL;
+    // Read input from stdin
     int size = readInputToArray(&heap);
+    // build right-handed heap
     buildRightHandedHeap(heap, size);
     int i;
+    // print heap
     for (i=1;i<=size;i++){
         printf("%d\n", heap[i]);
     }

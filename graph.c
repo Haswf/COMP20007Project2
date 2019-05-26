@@ -1,8 +1,9 @@
 /* * * * * * *
- * Module for creating and manipulating undirected graphs
+ * Module for creating and manipulating directed graphs
  *
  * template created for COMP20007 Design of Algorithms 2019
  * by Tobias Edwards <tobias.edwards@unimelb.edu.au>
+ * modified by Shuyang Fan for COMP20007 Project 2.
  */
 
 #include <assert.h>
@@ -24,10 +25,10 @@ Graph *new_graph() {
   graph->vertices = malloc(sizeof(List *) * INITIAL_CAPACITY);
   assert(graph->vertices);
   graph->weights = malloc(sizeof(List *) * INITIAL_CAPACITY);
+  assert(graph->weights);
 
   // Graph is initially empty
   graph->size = 0;
-
   graph->capacity = INITIAL_CAPACITY;
 
   return graph;
@@ -98,8 +99,7 @@ void graph_add_edge(Graph *graph, int u, int v, int w) {
     exit(EXIT_FAILURE);
   }
 
-  // Since we're implementing an directed graph, this edge is directional
-  // As such we must add u to v's adjacency list and visa versa
+  // Add u to v's adjacency list
   list_add_end(graph->vertices[u], v);
   list_add_end(graph->weights[u], w);
 }
@@ -107,14 +107,8 @@ void graph_add_edge(Graph *graph, int u, int v, int w) {
 // Returns whether or not the vertices u and v are adjacent in the
 // graph.
 bool graph_are_adjacent(Graph *graph, int u, int v) {
-  // Note: I added the list_contains() method to list.h and list.c for this
-
-  // Since the edges are bidirectional it's enough to check that u is in
-  // v's adjacency list, or the other way around.
-  // We'll do whichever operation is cheapest (i.e., the linear scan
-  // will take the least amount of time)
+  // Check if v is in list of u
   List *u_neighbours = graph->vertices[u];
-
   return list_contains(u_neighbours, v);
 
 }

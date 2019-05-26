@@ -1,8 +1,9 @@
 /* * * * * * *
- * Module for creating and manipulating undirected graphs
+ * Module for creating and manipulating directed graphs
  *
  * template created for COMP20007 Design of Algorithms 2019
  * by Tobias Edwards <tobias.edwards@unimelb.edu.au>
+ * modified by Shuyang Fan for COMP20007 Project 2.
  */
 
 #ifndef GRAPH_H
@@ -49,7 +50,9 @@ int graph_get_neighbours(Graph *graph, int u, int *neighbours, int *weights, int
 // Get the number of vertices in the graph
 int graph_num_vertices(Graph *graph);
 
+// print adjacency list
 void displayGraph(Graph* graph);
 
+// read graph from stdin
 int readGraph(Graph* graph);
 #endif

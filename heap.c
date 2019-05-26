@@ -2,7 +2,14 @@
 // Created by Has on 14/05/2019.
 //
 
-#include "max_heap.h"
+#include "heap.h"
+
+static int parent(int i);
+static void siftdown(int* heap, int size, int p);
+void swap(int* a, int* b);
+static int parent(int i);
+static int left_child(int i);
+static int right_child(int i);
 
 void swap(int* a, int* b){
     int tmp = *a;
@@ -10,14 +17,14 @@ void swap(int* a, int* b){
     *b = tmp;
 }
 
-int parent(int i){
+static int parent(int i){
     return (i/2);
 }
-int left_child(int i){
+static int left_child(int i){
     return 2*i;
 }
 
-int right_child(int i){
+static int right_child(int i){
     return 2*i+1;
 }
 
@@ -59,7 +66,7 @@ void buildHeap(int* array, int size){
     }
 }
 
-void siftdown(int* heap, int size, int p){
+static void siftdown(int* heap, int size, int p){
     while (left_child(p)<=size && (heap[p] < heap[left_child(p)] || heap[p] < heap[right_child(p)])){
         int left = left_child(p);
         int right = right_child(p);

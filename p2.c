@@ -20,7 +20,6 @@
 #define INF INT_MAX
 int readToMatrix(int*** matrix, int* k, char question);
 int shortestPath(int **graph, int u, int v, int k, int vertexCount);
-int min(int i, int j);
 /* --- DO NOT CHANGE THE CODE BELOW THIS LINE --- */
 
 void problem_2_a();
@@ -108,6 +107,7 @@ void dijkstras(Graph *graph, int source) {
             }
         }
     }
+    // if last node is unreachable, print 'No Path'
     if (cost[MAX_NODES-1] == INFINITY){
         printf("No Path");
     }
@@ -116,6 +116,7 @@ void dijkstras(Graph *graph, int source) {
         int path[MAX_NODES];
         int count = 0;
         path[count] = MAX_NODES-1;
+        // store path to array path
         while (prev >= 0){
             count += 1;
             path[count] = prev;
@@ -124,11 +125,13 @@ void dijkstras(Graph *graph, int source) {
 
         printf("%d\n", cost[MAX_NODES-1]);
         printf("%d\n", count);
+        // print path
         int p=0;
         for (p=count;p>=0;p--){
             printf("%d\n", path[p]);
         }
     }
+    // free queue
     free(queue);
     queue = NULL;
 }
@@ -147,37 +150,33 @@ void problem_2_b() {
     matrix = NULL;
 }
 
-int min(int i, int j){
-    if (i > j){
-        return j;
-    }
-    else {
-        return i;
-    }
-}
-
+// Read graph and store as a adjacency matrix.
 int readToMatrix(int*** matrix, int* k, char question) {
     int vertexCount = 0;
     if (question == 'a') {
         scanf("%d", &vertexCount);
     } else if (question == 'b') {
-        scanf("%d %d", &vertexCount, k);
+        scanf("%d %d", &vertexCount, k); // read vertex number and maximum edge allowed.
     }
     *matrix = (int **) malloc(sizeof(int *) * vertexCount);
 
     int i;
+    // for each vertex, save its edges
     for (i = 0; i < vertexCount; i++) {
         (*matrix)[i] = (int *) malloc(sizeof(int) * vertexCount);
+        // initialise this "row" to infinity
         int z;
         for (z = 0; z < vertexCount; z++) {
             (*matrix)[i][z] = INF;
         }
 
+        // read out_degree
         int out_degree = 0;
         scanf("%d", &out_degree);
         int j;
         int end, weight;
 
+        // save w
         for (j = 0; j < out_degree; j++) {
             scanf("%d %d", &end, &weight);
             (*matrix)[i][end] = weight;
@@ -186,7 +185,7 @@ int readToMatrix(int*** matrix, int* k, char question) {
     return vertexCount;
 }
 
-// A naive recursive function to count walks from u to v with k edges
+
 int shortestPath(int **graph, int u, int v, int k, int vertexCount) {
     // Table to be filled up using DP. The value sp[i][j][e] will store
     // weight of the shortest path from i to j with exactly k edges
@@ -205,7 +204,7 @@ int shortestPath(int **graph, int u, int v, int k, int vertexCount) {
                     shortestPath[from][to][edge] = 0;
                     previous[from][to][edge] = from;
                 }
-
+                // if from and to are directly connected
                 if (edge == 1 && graph[from][to] != INF) {
                     shortestPath[from][to][edge] = graph[from][to];
                     previous[from][to][edge] = from;
@@ -218,43 +217,49 @@ int shortestPath(int **graph, int u, int v, int k, int vertexCount) {
                         // should not be same as either i or j
                         if (graph[from][step] != INF && from != step && to != step &&
                             shortestPath[step][to][edge - 1] != INF) {
-                            //printf("Edge: %d, from %d to %d via %d \n", edge, from, to, step);
+                            // update new cost and previous point
                             if (shortestPath[from][to][edge] > graph[from][step] + shortestPath[step][to][edge - 1]) {
+                                shortestPath[from][to][edge] = graph[from][step] + shortestPath[step][to][edge - 1];
                                 previous[from][to][edge] = previous[step][to][edge - 1];
                             }
-                            shortestPath[from][to][edge] = min(shortestPath[from][to][edge],
-                                                               graph[from][step] + shortestPath[step][to][edge - 1]);
                         }
                     }
                 }
             }
         }
     }
-    int prev_node = vertexCount-1;
-    int min = INF;
+    int minCost = INF;
     int shortest_edge = NO_PREV;
     int i;
-    int path[k+1];
+
+    // find edge that has minimum cost
     for (i = 0; i <= k; i++) {
-        int path_length = shortestPath[u][prev_node][i];
+        int path_length = shortestPath[u][v][i];
         if (path_length < min) {
-            min = path_length;
+            minCost = path_length;
             shortest_edge = i;
         }
     }
+
+    int path[k+1]; // To store path. A path with k edges can have at most k+1 point.
     int count = k;
-    while (prev_node > 0) {
+    int prev_node = vertexCount-1;
+    // Keep saving points to path until start is reached
+    while (prev_node > u) {
         path[count--] = prev_node;
         prev_node = previous[u][prev_node][shortest_edge];
         shortest_edge--;
     }
+
+    // Print No path is v is reachable from u via k edges
     if (shortestPath[u][v][k] == INF){
         printf("No Path");
     }
+    // print output
     else{
         printf("%d\n", shortestPath[u][v][k]);
         printf("%d\n", k);
-
+        // print path
         int j;
         for (j=0;j<=k;j++){
             printf("%d\n", path[j]);
