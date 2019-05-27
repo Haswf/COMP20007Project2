@@ -17,7 +17,7 @@ struct node_t {
 
 
 static void recursiveStoreValue(tNode *root, int* sorted, int* n);
-static void* recursiveSearchTree(tNode* tnode, int key);
+static tNode* recursiveSearchTree(tNode* tnode, int key);
 static void recursiveFreeTree(tNode *root);
 static tNode* recursiveInsert(tNode* root, tNode* new);
 static void recursiveInOrder(tNode* root);
@@ -84,15 +84,15 @@ static void recursiveInOrder(tNode* root) {
     }
 }
 
-static void* recursiveSearchTree(tNode* tnode, int key){
+static tNode* recursiveSearchTree(tNode* tnode, int key){
     if (!tnode){
         return NULL;
     }
     if (tnode->value > key){
-        recursiveSearchTree(tnode->left, key);
+        return recursiveSearchTree(tnode->left, key);
     }
     else if (tnode->value < key){
-        recursiveSearchTree(tnode->right, key);
+        return recursiveSearchTree(tnode->right, key);
     }
     else {
         return tnode;

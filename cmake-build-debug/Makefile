@@ -123,32 +123,32 @@ COMP20007Project2/fast:
 	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/build
 .PHONY : COMP20007Project2/fast
 
-p2b.o: p2b.c.o
+tree.o: tree.c.o
 
-.PHONY : p2b.o
+.PHONY : tree.o
 
 # target to build an object file
-p2b.c.o:
-	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/p2b.c.o
-.PHONY : p2b.c.o
+tree.c.o:
+	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/tree.c.o
+.PHONY : tree.c.o
 
-p2b.i: p2b.c.i
+tree.i: tree.c.i
 
-.PHONY : p2b.i
+.PHONY : tree.i
 
 # target to preprocess a source file
-p2b.c.i:
-	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/p2b.c.i
-.PHONY : p2b.c.i
+tree.c.i:
+	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/tree.c.i
+.PHONY : tree.c.i
 
-p2b.s: p2b.c.s
+tree.s: tree.c.s
 
-.PHONY : p2b.s
+.PHONY : tree.s
 
 # target to generate assembly for a file
-p2b.c.s:
-	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/p2b.c.s
-.PHONY : p2b.c.s
+tree.c.s:
+	$(MAKE) -f CMakeFiles/COMP20007Project2.dir/build.make CMakeFiles/COMP20007Project2.dir/tree.c.s
+.PHONY : tree.c.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... COMP20007Project2"
 	@echo "... edit_cache"
-	@echo "... p2b.o"
-	@echo "... p2b.i"
-	@echo "... p2b.s"
+	@echo "... tree.o"
+	@echo "... tree.i"
+	@echo "... tree.s"
 .PHONY : help
 
 

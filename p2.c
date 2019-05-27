@@ -235,7 +235,7 @@ int shortestPath(int **graph, int u, int v, int k, int vertexCount) {
     // find edge that has minimum cost
     for (i = 0; i <= k; i++) {
         int path_length = shortestPath[u][v][i];
-        if (path_length < min) {
+        if (path_length < minCost) {
             minCost = path_length;
             shortest_edge = i;
         }

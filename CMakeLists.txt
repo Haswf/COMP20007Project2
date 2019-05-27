@@ -6,7 +6,6 @@ set(CMAKE_C_STANDARD 11)
 include_directories(.)
 
 add_executable(COMP20007Project2
-        p2b.c
-        p2b.h
+        tree.c
         )
 target_link_libraries(COMP20007Project2 m)
