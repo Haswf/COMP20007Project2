@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/COMP20007Project2/q2a.c
+q2a.h
+/mnt/c/COMP20007Project2/q2a.h
+stdio.h
+-
+limits.h
+-
+stdlib.h
+-
+
+/mnt/c/COMP20007Project2/q2a.h
+

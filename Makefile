@@ -14,7 +14,7 @@ P1_FILES = p1.c heap.c
 p1: $(P1_FILES)
 	$(CC) $(CFLAGS) -o p1 $(P1_FILES) -lm 
 
-P2_FILES = p2.c graph.c priorityqueue.c list.c
+P2_FILES = p2.c
 p2: $(P2_FILES)
 	$(CC) $(CFLAGS) -o p2 $(P2_FILES)
 

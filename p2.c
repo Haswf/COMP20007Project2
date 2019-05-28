@@ -12,12 +12,11 @@
 #include <assert.h>
 #include <limits.h>
 
-#include "graph.h"
-#include "priorityqueue.h"
-
 #define NO_PREV -1
-#define INFINITY -1
+#define INFINITY INT_MAX
 #define INF INT_MAX
+void bellmanFord(int** matrix, int source, int vertexCount);
+
 int readToMatrix(int*** matrix, int* k, char question);
 int shortestPath(int **graph, int u, int v, int k, int vertexCount);
 /* --- DO NOT CHANGE THE CODE BELOW THIS LINE --- */
@@ -52,70 +51,50 @@ void print_usage_and_exit(char **argv) {
 
 /* --- DO NOT CHANGE THE CODE ABOVE THIS LINE --- */
 
-void dijkstras(Graph *graph, int source);
-
 /* TODO: Implement your solution to Problem 2.a. in this function. */
 void problem_2_a() {
-    Graph* dag = new_graph();
-    readGraph(dag);
-    //displayGraph(dag);
-    dijkstras(dag, 0);
-    free_graph(dag);
-    dag = NULL;
+    int vertexCount, k;
+    int** matrix = NULL;
+    vertexCount = readToMatrix(&matrix, &k, 'a');
+    int source =0;
+    bellmanFord(matrix, source, vertexCount);
+    free(matrix);
+    matrix = NULL;
 }
 
-void dijkstras(Graph *graph, int source) {
-    int MAX_NODES = graph->size;
-    PriorityQueue *queue = new_priority_queue();
-    int i, degree, from, to, weight, new_cost;
-    bool in_queue;
-
-    // To store results from graph_get_neighbours
-    int neighbours[MAX_NODES];
-    int weights[MAX_NODES];
-
+// Read graph and store as a adjacency matrix.
+void bellmanFord(int** matrix, int source, int vertexCount) {
     // To store current min-costs and previous vertices
-    int previous[MAX_NODES];
-    int cost[MAX_NODES];
+    int previous[vertexCount];
+    int cost[vertexCount];
 
-    for (i = 0; i < graph_num_vertices(graph); i++) {
+
+    // inisitalize distance to all vertex as infinity
+    int i;
+    for (i = 0; i < vertexCount; i++) {
         previous[i] = NO_PREV;
         cost[i] = INFINITY;
     }
-
     cost[source] = 0;
-    priority_queue_insert(queue, source, cost[source]);
-
-    while (!priority_queue_is_empty(queue)) {
-        from = priority_queue_remove_min(queue);
-        degree = graph_get_neighbours(graph, from, neighbours, weights, MAX_NODES);
-        for (i = 0; i < degree; i++) {
-            to = neighbours[i];
-            weight = weights[i];
-
-            if (cost[to] == INFINITY || cost[to] > cost[from] + weight) {
-                new_cost = cost[from] + weight;
-                if (cost[to] == INFINITY) { // to is not in the priority queueu
-                    priority_queue_insert(queue, to, new_cost);
-                } else { // we must update the cost
-                    in_queue = priority_queue_update(queue, to, new_cost);
-                    assert(in_queue); // confirm that this node was in fact in the queue
+    for (int j=0; j<=vertexCount-1;j++){
+        for (int from=0; from<vertexCount; from++){
+            for (int to=0; to<vertexCount; to++){
+                if (matrix[from][to] != INFINITY && cost[from] != INFINITY && cost[from]+matrix[from][to] < cost[to]){
+                    cost[to] = cost[from] + matrix[from][to];
+                    previous[to] = from;
                 }
-
-                cost[to] = new_cost;
-                previous[to] = from;
             }
         }
     }
     // if last node is unreachable, print 'No Path'
-    if (cost[MAX_NODES-1] == INFINITY){
+    if (cost[vertexCount-1] == INFINITY){
         printf("No Path");
     }
     else {
-        int prev = previous[MAX_NODES-1];
-        int path[MAX_NODES];
+        int prev = previous[vertexCount-1];
+        int path[vertexCount];
         int count = 0;
-        path[count] = MAX_NODES-1;
+        path[count] = vertexCount-1;
         // store path to array path
         while (prev >= 0){
             count += 1;
@@ -123,7 +102,7 @@ void dijkstras(Graph *graph, int source) {
             prev = previous[prev];
         }
 
-        printf("%d\n", cost[MAX_NODES-1]);
+        printf("%d\n", cost[vertexCount-1]);
         printf("%d\n", count);
         // print path
         int p=0;
@@ -131,9 +110,6 @@ void dijkstras(Graph *graph, int source) {
             printf("%d\n", path[p]);
         }
     }
-    // free queue
-    free(queue);
-    queue = NULL;
 }
 
 
@@ -197,7 +173,7 @@ int shortestPath(int **graph, int u, int v, int k, int vertexCount) {
         for (int from = 0; from < vertexCount; from++) {
             for (int to = 0; to < vertexCount; to++) {
                 // initialize value
-                shortestPath[from][to][edge] = INF;
+                shortestPath[from][to][edge] = INFINITY;
                 previous[from][to][edge] = NO_PREV;
                 // from base cases
                 if (edge == 0 && from == to) {
@@ -205,7 +181,7 @@ int shortestPath(int **graph, int u, int v, int k, int vertexCount) {
                     previous[from][to][edge] = from;
                 }
                 // if from and to are directly connected
-                if (edge == 1 && graph[from][to] != INF) {
+                if (edge == 1 && graph[from][to] != INFINITY) {
                     shortestPath[from][to][edge] = graph[from][to];
                     previous[from][to][edge] = from;
                 }
@@ -215,8 +191,8 @@ int shortestPath(int **graph, int u, int v, int k, int vertexCount) {
                     for (int step = 0; step < vertexCount; step++) {
                         // There should be an edge from i to a and a
                         // should not be same as either i or j
-                        if (graph[from][step] != INF && from != step && to != step &&
-                            shortestPath[step][to][edge - 1] != INF) {
+                        if (graph[from][step] != INFINITY && from != step && to != step &&
+                            shortestPath[step][to][edge - 1] != INFINITY) {
                             // update new cost and previous point
                             if (shortestPath[from][to][edge] > graph[from][step] + shortestPath[step][to][edge - 1]) {
                                 shortestPath[from][to][edge] = graph[from][step] + shortestPath[step][to][edge - 1];
@@ -228,7 +204,7 @@ int shortestPath(int **graph, int u, int v, int k, int vertexCount) {
             }
         }
     }
-    int minCost = INF;
+    int minCost = INFINITY;
     int shortest_edge = NO_PREV;
     int i;
 
@@ -252,7 +228,7 @@ int shortestPath(int **graph, int u, int v, int k, int vertexCount) {
     }
 
     // Print No path is v is reachable from u via k edges
-    if (shortestPath[u][v][k] == INF){
+    if (shortestPath[u][v][k] == INFINITY){
         printf("No Path");
     }
     // print output

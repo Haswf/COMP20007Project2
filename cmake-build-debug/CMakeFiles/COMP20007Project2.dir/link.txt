@@ -1,1 +1,1 @@
-/usr/bin/cc -g   CMakeFiles/COMP20007Project2.dir/tree.c.o  -o COMP20007Project2 -lm 
+/usr/bin/cc -g   CMakeFiles/COMP20007Project2.dir/q2a.c.o  -o COMP20007Project2 -lm 

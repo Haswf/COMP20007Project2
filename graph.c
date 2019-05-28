@@ -29,6 +29,7 @@ Graph *new_graph() {
 
   // Graph is initially empty
   graph->size = 0;
+  graph->edge = 0;
   graph->capacity = INITIAL_CAPACITY;
 
   return graph;
@@ -102,6 +103,7 @@ void graph_add_edge(Graph *graph, int u, int v, int w) {
   // Add u to v's adjacency list
   list_add_end(graph->vertices[u], v);
   list_add_end(graph->weights[u], w);
+  graph->edge++;
 }
 
 // Returns whether or not the vertices u and v are adjacent in the
@@ -158,6 +160,10 @@ int graph_get_neighbours(Graph *graph, int u, int *neighbours, int *weights, int
 // Get the number of vertices in the graph
 int graph_num_vertices(Graph *graph) {
   return graph->size;
+}
+
+int graph_num_edges(Graph *graph){
+    return graph->edge;
 }
 
 int readGraph(Graph* graph){

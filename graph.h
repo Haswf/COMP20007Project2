@@ -15,6 +15,7 @@ struct graph {
     List **vertices; // Array of adjacency Lists
     List **weights; // Array of weight Lists
     int size; // Number of vertices in the array
+    int edge;
     int capacity; // Max number of vertices the current array can hold
 };
 
@@ -46,6 +47,9 @@ bool graph_are_adjacent(Graph *graph, int u, int v);
 // Gives an error if the size of the array provided (n) is less than the number
 // of vertices.
 int graph_get_neighbours(Graph *graph, int u, int *neighbours, int *weights, int n);
+
+// Get the number of edges in the graph
+int graph_num_edges(Graph *graph);
 
 // Get the number of vertices in the graph
 int graph_num_vertices(Graph *graph);
