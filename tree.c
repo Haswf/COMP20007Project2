@@ -3,11 +3,11 @@
 //
 
 #include "deque.h"
-#include "tree.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <assert.h>
 #include <math.h>
+#include "tree.h"
 
 struct node_t {
     int value;
