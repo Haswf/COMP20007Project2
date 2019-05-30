@@ -133,37 +133,32 @@ int height(tNode* tnode){
     if (tnode == NULL)
         return 0;
     else{
-        /* compute the depth of each subtree */
-        int lDepth = height(tnode->left);
-        int rDepth = height(tnode->right);
+        int left = height(tnode->left);
+        int right = height(tnode->right);
 
-        /* use the larger one */
-        if (lDepth > rDepth)
-            return(lDepth + 1);
-        else return(rDepth + 1);
+        if (left > right)
+            return(left + 1);
+        else return(right + 1);
     }
 }
 
-tNode* sortedArrayToBST(int arr[], int start, int end)
+tNode* sortedArrayToBST(int* arr, int start, int end)
 {
-    /* Base Case */
+    /* insert -1 if no element left */
     if (start > end){
         tNode* nil = newtNode(-1);
         return nil;
     }
 
-    /* Get the middle element and make it root */
+    /* select median to be a root */
     int mid = (start + end)/2;
     tNode *root = newtNode(arr[mid]);
 
-    /* Recursively construct the left subtree and make it
-       left child of root */
+    /* Recursively construct the left subtree */
     root->left =  sortedArrayToBST(arr, start, mid-1);
 
-    /* Recursively construct the right subtree and make it
-       right child of root */
+    /* Recursively construct the right subtree */
     root->right = sortedArrayToBST(arr, mid+1, end);
-
     return root;
 }
 
@@ -210,31 +205,3 @@ static void recursive_count_tree(tNode* root, int* count){
         *count += 1;
     }
 }
-
-
-//int main(int argc, char* argv[]){
-//    tNode* tree = NULL;
-//    int* arr = NULL;
-//    int count = readArray(&arr);
-//    int i;
-//    for (i=0;i<count;i++){
-//        tree = insert(tree, arr[i]);
-//    };
-//
-//    int output[count];
-//    //inOrderTraverse(tree);
-//    printf("%d\n", countTree(tree));
-//    printf("%d\n", height(tree));
-//    ;
-//    int output_count = storeValue(tree, output);
-//    //for (int j=0; j<output_count;j++){
-//    //    printf("%d", output[j]);
-//    //}
-//    tNode* balanced = sortedArrayToBST(output, 0, output_count-1);
-//    //int line = printLine(balanced);
-//    //rintf("%d\n", line);
-//    levelOrderTraverse(balanced);
-//    free_tree(tree);
-//    return 0;
-//};
-

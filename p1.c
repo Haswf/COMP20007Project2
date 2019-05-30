@@ -3,14 +3,14 @@
  * COMP20007 Design of Algorithms
  * Semester 1 2019
  *
- * Written by: [ YOUR NAME HERE ]
+ * Written by: [ Shuyang Fan ]
  */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "heap.h"
-int main(int, char**);
+
 /* --- DO NOT CHANGE THE CODE BELOW THIS LINE --- */
 
 void problem_1_a();
@@ -43,7 +43,6 @@ void print_usage_and_exit(char **argv) {
 
 /* --- DO NOT CHANGE THE CODE ABOVE THIS LINE --- */
 
-/* TODO: Implement your solution to Problem 1.a. in this function. */
 void problem_1_a() {
     int* heap = NULL;
     // Read input from stdin
@@ -59,7 +58,6 @@ void problem_1_a() {
     heap = NULL;
 }
 
-/* TODO: Implement your solution to Problem 1.b. in this function. */
 void problem_1_b() {
     int* heap = NULL;
     // Read input from stdin

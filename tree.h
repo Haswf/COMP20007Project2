@@ -12,7 +12,7 @@ int readArray(int** arr);
 tNode* searchTree(tNode* tree, int key);
 int height(tNode* node);
 void traverseTree(tNode* root);
-tNode* sortedArrayToBST(int arr[], int start, int end);
+tNode* sortedArrayToBST(int* arr, int start, int end);
 tNode* insert(tNode* root, int data);
 int storeValue(tNode *root, int* sorted);
 void freeTree(tNode *tree);

@@ -3,7 +3,7 @@
  * COMP20007 Design of Algorithms
  * Semester 1 2019
  *
- * Written by: [ YOUR NAME HERE ]
+ * Written by: [ Shuyang Fan ]
  */
 
 #include <stdio.h>
@@ -14,9 +14,8 @@
 
 #define NO_PREV -1
 #define INFINITY INT_MAX
-#define INF INT_MAX
-void bellmanFord(int** matrix, int source, int vertexCount);
 
+void bellmanFord(int** matrix, int source, int vertexCount);
 int readToMatrix(int*** matrix, int* k, char question);
 int shortestPath(int **graph, int u, int v, int k, int vertexCount);
 /* --- DO NOT CHANGE THE CODE BELOW THIS LINE --- */
@@ -51,12 +50,48 @@ void print_usage_and_exit(char **argv) {
 
 /* --- DO NOT CHANGE THE CODE ABOVE THIS LINE --- */
 
-/* TODO: Implement your solution to Problem 2.a. in this function. */
+/* read graph from input update k if required */
+int readToMatrix(int*** matrix, int* k, char question) {
+    int vertexCount = 0;
+    if (question == 'a') {
+        scanf("%d", &vertexCount);
+    } else if (question == 'b') {
+        scanf("%d %d", &vertexCount, k); // read vertex number and maximum edge allowed.
+    }
+    *matrix = (int **) malloc(sizeof(int *) * vertexCount);
+
+    int i;
+    // for each vertex, save its edges
+    for (i = 0; i < vertexCount; i++) {
+        (*matrix)[i] = (int *) malloc(sizeof(int) * vertexCount);
+        // initialise this "row" to infinity
+        int z;
+        for (z = 0; z < vertexCount; z++) {
+            (*matrix)[i][z] = INFINITY;
+        }
+
+        // read out_degree
+        int out_degree = 0;
+        scanf("%d", &out_degree);
+        int j;
+        int end, weight;
+
+        // save edge and weight
+        for (j = 0; j < out_degree; j++) {
+            scanf("%d %d", &end, &weight);
+            (*matrix)[i][end] = weight;
+        }
+    }
+    return vertexCount;
+}
+
+
 void problem_2_a() {
     int vertexCount, k;
     int** matrix = NULL;
+    /* read graph from input */
     vertexCount = readToMatrix(&matrix, &k, 'a');
-    int source =0;
+    int source = 0;
     bellmanFord(matrix, source, vertexCount);
     free(matrix);
     matrix = NULL;
@@ -67,7 +102,6 @@ void bellmanFord(int** matrix, int source, int vertexCount) {
     // To store current min-costs and previous vertices
     int previous[vertexCount];
     int cost[vertexCount];
-
 
     // inisitalize distance to all vertex as infinity
     int i;
@@ -113,69 +147,31 @@ void bellmanFord(int** matrix, int source, int vertexCount) {
 }
 
 
-/* TODO: Implement your solution to Problem 2.b. in this function. */
 void problem_2_b() {
-    /* Let us create the graph shown in above diagram*/
     int vertexCount, start, end, k;
     int** matrix = NULL;
+    /* read graph and k from input */
     vertexCount = readToMatrix(&matrix, &k, 'b');
     start =0;
     end = vertexCount - 1;
     shortestPath(matrix, start, end, k, vertexCount);
+    /* clean up */
     free(matrix);
     matrix = NULL;
 }
 
-// Read graph and store as a adjacency matrix.
-int readToMatrix(int*** matrix, int* k, char question) {
-    int vertexCount = 0;
-    if (question == 'a') {
-        scanf("%d", &vertexCount);
-    } else if (question == 'b') {
-        scanf("%d %d", &vertexCount, k); // read vertex number and maximum edge allowed.
-    }
-    *matrix = (int **) malloc(sizeof(int *) * vertexCount);
-
-    int i;
-    // for each vertex, save its edges
-    for (i = 0; i < vertexCount; i++) {
-        (*matrix)[i] = (int *) malloc(sizeof(int) * vertexCount);
-        // initialise this "row" to infinity
-        int z;
-        for (z = 0; z < vertexCount; z++) {
-            (*matrix)[i][z] = INF;
-        }
-
-        // read out_degree
-        int out_degree = 0;
-        scanf("%d", &out_degree);
-        int j;
-        int end, weight;
-
-        // save w
-        for (j = 0; j < out_degree; j++) {
-            scanf("%d %d", &end, &weight);
-            (*matrix)[i][end] = weight;
-        }
-    }
-    return vertexCount;
-}
-
-
 int shortestPath(int **graph, int u, int v, int k, int vertexCount) {
-    // Table to be filled up using DP. The value sp[i][j][e] will store
-    // weight of the shortest path from i to j with exactly k edges
     int shortestPath[vertexCount][vertexCount][k + 1];
     int previous[vertexCount][vertexCount][k + 1];
 
-    // Loop for number of edges from 0 to
     for (int edge = 0; edge <= k; edge++) {
         for (int from = 0; from < vertexCount; from++) {
             for (int to = 0; to < vertexCount; to++) {
-                // initialize value
+                /* initialise shortest path with INFINITY */
                 shortestPath[from][to][edge] = INFINITY;
+                /* initialise previous with NO_PREV */
                 previous[from][to][edge] = NO_PREV;
-                // from base cases
+
                 if (edge == 0 && from == to) {
                     shortestPath[from][to][edge] = 0;
                     previous[from][to][edge] = from;
@@ -186,14 +182,12 @@ int shortestPath(int **graph, int u, int v, int k, int vertexCount) {
                     previous[from][to][edge] = from;
                 }
 
-                //go to adjacent only when number of edges is more than 1
                 if (edge > 1) {
                     for (int step = 0; step < vertexCount; step++) {
-                        // There should be an edge from i to a and a
-                        // should not be same as either i or j
+                        /* Check if we can use a point as a stepping stone */
                         if (graph[from][step] != INFINITY && from != step && to != step &&
                             shortestPath[step][to][edge - 1] != INFINITY) {
-                            // update new cost and previous point
+                            /* update new cost and previous point */
                             if (shortestPath[from][to][edge] > graph[from][step] + shortestPath[step][to][edge - 1]) {
                                 shortestPath[from][to][edge] = graph[from][step] + shortestPath[step][to][edge - 1];
                                 previous[from][to][edge] = previous[step][to][edge - 1];
@@ -227,7 +221,7 @@ int shortestPath(int **graph, int u, int v, int k, int vertexCount) {
         shortest_edge--;
     }
 
-    // Print No path is v is reachable from u via k edges
+    // Print No path if v is unreachable from u via k edges
     if (shortestPath[u][v][k] == INFINITY){
         printf("No Path");
     }

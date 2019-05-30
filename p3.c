@@ -3,7 +3,7 @@
  * COMP20007 Design of Algorithms
  * Semester 1 2019
  *
- * Written by: [ YOUR NAME HERE ]
+ * Written by: [ Shuyang Fan ]
  */
 
 #include "tree.h"
@@ -22,29 +22,32 @@ int main(int argc, char **argv) {
 
 /* --- DO NOT CHANGE THE CODE ABOVE THIS LINE --- */
 
-/* TODO: Implement your solution to Problem 3 in this function. */
 void problem_3() {
-    tNode* tree = NULL;
+
+    /* read numbers from input */
     int* arr = NULL;
     int count = readArray(&arr);
     int i;
+
+    /* insert elements in array into a btree */
+    tNode* tree = NULL;
     for (i=0;i<count;i++){
         tree = insert(tree, arr[i]);
     };
 
-    int output[count];
-    //inOrderTraverse(tree);
+    /* convert array to a set */
+    int set[count];
+    int setCount = storeValue(tree, set);
+
+    /* insert elements in set to a balanced tree */
+    tNode* balanced = sortedArrayToBST(set, 0, setCount-1);
+
+    /* print outputs */
     printf("%d\n", countTree(tree));
     printf("%d\n", height(tree));
-    ;
-    int output_count = storeValue(tree, output);
-    //for (int j=0; j<output_count;j++){
-    //    printf("%d", output[j]);
-    //}
-    tNode* balanced = sortedArrayToBST(output, 0, output_count-1);
-    //int line = printLine(balanced);
-    //rintf("%d\n", line);
     levelOrderTraverse(balanced);
+
+    /* clean up */
     freeTree(tree);
     freeTree(balanced);
     free(arr);
